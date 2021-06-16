@@ -1,0 +1,2 @@
+# prisma-factory
+Factories ❤️ Prisma
