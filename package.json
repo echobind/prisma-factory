@@ -1,0 +1,41 @@
+{
+  "name": "prisma-factory",
+  "version": "0.1.0",
+  "description": "Create factories for your Prisma Models",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echobind/prisma-factory.git"
+  },
+  "keywords": [
+    "prisma",
+    "testing",
+    "factory",
+    "factories"
+  ],
+  "author": "Chris Ball <chris@echobind.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/echobind/prisma-factory/issues"
+  },
+  "homepage": "https://github.com/echobind/prisma-factory#readme",
+  "devDependencies": {
+    "@prisma/client": "^2.25.0",
+    "@prisma/sdk": "^2.25.0",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.170",
+    "@types/rimraf": "^3.0.0",
+    "jest": "^27.0.4",
+    "jest-mock-extended": "^1.0.16",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
