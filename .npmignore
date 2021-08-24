@@ -1,0 +1,15 @@
+# source
+package-lock.json
+.prettierrc
+prisma/
+.vscode/
+.github/
+__tests__
+src/
+jest.config.js
+docker-compose.db.yml
+factories.js
+factories.d.ts
+
+# misc
+.DS_Store
