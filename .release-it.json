@@ -4,5 +4,8 @@
   },
   "github": {
     "release": true
+  },
+  "npm": {
+    "skipChecks": true
   }
 }
