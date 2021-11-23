@@ -2,7 +2,7 @@
   "name": "prisma-factory",
   "version": "0.1.0",
   "description": "Generates factories for your prisma models",
-  "bin": "./dist/generator.js",
+  "bin": "./dist/src/generator.js",
   "scripts": {
     "build": "tsc -p .",
     "dev:watch": "tsc -p . --watch",
@@ -44,6 +44,7 @@
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "prisma": "^2.26.0",
+    "rimraf": "^3.0.2",
     "ts-jest": "^27.0.3",
     "ts-morph": "^11.0.0",
     "ts-node": "^10.0.0",
