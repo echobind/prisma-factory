@@ -17,12 +17,11 @@
     "prisma:generate": "npx prisma generate",
     "docker:db": "docker-compose -f docker-compose.db.yml up -d",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "release": "release-it"
   },
   "repository": "git@github.com:echobind/prisma-factory.git",
-  "contributors": [
-    "Chris Ball <chris@echobind.com>"
-  ],
+  "contributors": [],
   "license": "MIT",
   "private": false,
   "keywords": [
@@ -44,6 +43,7 @@
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "prisma": "^2.26.0",
+    "release-it": "^14.11.8",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.3",
     "ts-morph": "^11.0.0",
