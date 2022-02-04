@@ -1,0 +1,10 @@
+**/build/**
+**/dist/**
+**/.next/**
+**/.turbo/**
+**/tmp/**
+
+**/*.tsbuildinfo
+
+.yarn
+yarn.lock

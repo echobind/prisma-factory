@@ -1,0 +1,6 @@
+node_modules
+dist
+prisma/dev.sqlite
+.env
+test.json
+*.log
