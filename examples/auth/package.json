@@ -1,0 +1,33 @@
+{
+  "name": "auth",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^6.2.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "@vitest/ui": "^0.2.7",
+    "prisma": "^3.9.1",
+    "prisma-factory": "*",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vite-tsconfig-paths": "^3.3.17",
+    "vitest": "^0.2.7"
+  }
+}

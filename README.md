@@ -1,4 +1,4 @@
-# Turborepo starter
+# Echobind Prisma Tooling
 
 This is an official Yarn v1 starter turborepo.
 
