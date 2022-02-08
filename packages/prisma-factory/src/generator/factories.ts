@@ -1,19 +1,24 @@
 import { DMMF } from '@prisma/client/runtime';
 import { SourceFile } from 'ts-morph';
 
+/**
+ * Adds the factory functions to the generated files.
+ */
 function addFactoryFunctions(sourceFile: SourceFile, dmmf: DMMF.Document) {
-  return dmmf.datamodel.models.map((m) => addFactoryFunction(sourceFile, m));
+  return dmmf.datamodel.models.map((m) => addModelFactoryFunction(sourceFile, m));
 }
 
 /**
- * Adds the factory function to the file.
+ * Adds the factory function for a given model in the Prisma schema.
  */
-function addFactoryFunction(sourceFile: SourceFile, model: DMMF.Model) {
+function addModelFactoryFunction(sourceFile: SourceFile, model: DMMF.Model) {
   const newFunction = sourceFile.addFunction({
     name: `create${model.name}Factory`,
   });
 
-  newFunction.insertParameters(0, [{ name: 'requiredAttrs', type: `Partial<${model.name}>` }]);
+  newFunction.insertParameters(0, [
+    { name: 'requiredAttrs', type: `Partial<${model.name}>`, hasQuestionToken: true },
+  ]);
 
   newFunction.setBodyText(
     `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs); `
@@ -25,7 +30,7 @@ function addFactoryFunction(sourceFile: SourceFile, model: DMMF.Model) {
 }
 
 /**
- * Adds necessary imports to the file
+ * Adds the necessary imports to the generated files with the factory functions.
  */
 function addImports(sourceFile: SourceFile, dmmf: DMMF.Document) {
   const modelNames = dmmf.datamodel.models.map((m) => m.name);
@@ -44,7 +49,7 @@ function addImports(sourceFile: SourceFile, dmmf: DMMF.Document) {
 }
 
 /**
- * Generates factories for use in prisma-factory.
+ * Generates factories for use in `prisma-factory`.
  */
 export function generateFactories(sourceFile: SourceFile, dmmf: DMMF.Document) {
   addImports(sourceFile, dmmf);

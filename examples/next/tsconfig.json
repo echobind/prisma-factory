@@ -1,0 +1,20 @@
+{
+  "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "types": ["node", "jest"],
+    "baseUrl": ".",
+    "paths": {
+      "test-utils": ["test/utils"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}

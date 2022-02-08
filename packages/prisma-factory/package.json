@@ -32,9 +32,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "bin": {
-    "prisma-factory-types": "./dist/generator.js"
-  },
+  "bin": "./dist/generator.js",
   "scripts": {
     "dev": "tsup src/index.ts src/generator.ts --format cjs,esm --watch --onSuccess \"yarn prisma:generate\"",
     "build": "tsup src/index.ts src/generator.ts --format cjs,esm --dts-resolve",
@@ -46,20 +44,14 @@
     "migrate:deploy": "prisma migrate deploy",
     "migrate:status": "prisma migrate status",
     "migrate:resolve": "prisma migrate resolve",
-    "prisma:generate": "prisma generate",
-    "docker:db": "docker-compose -f docker-compose.db.yml up -d",
+    "db:generate": "prisma generate",
+    "db:start": "docker-compose up -d",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "release": "release-it"
+    "test:coverage": "jest --coverage"
   },
   "peerDependencies": {
     "@prisma/client": "*",
     "typescript": ">4.5.2"
-  },
-  "peerDependenciesMeta": {
-    "@prisma/client": {
-      "optional": false
-    }
   },
   "dependencies": {
     "@prisma/generator-helper": "^3.9.1",

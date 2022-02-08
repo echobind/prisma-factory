@@ -4,7 +4,7 @@ import { generate } from './factory-generator';
 
 generatorHandler({
   onManifest: () => ({
-    defaultOutput: 'node_modules/.prisma-factory/generated',
+    defaultOutput: 'node_modules/.prisma-factory/factories',
     prettyName: 'Prisma Factories',
     requiresGenerators: ['prisma-client-js'],
   }),

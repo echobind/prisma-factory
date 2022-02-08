@@ -1,7 +1,10 @@
 {
   "pipeline": {
+    "db:generate": {
+      "outputs": ["node_modules/.prisma/client", "node_modules/.prisma-factory/factories"]
+    },
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["db:generate", "^build"],
       "outputs": ["dist/**", ".next/**"]
     },
     "lint": {

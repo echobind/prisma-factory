@@ -14,9 +14,13 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo run clean --parallel && rimraf node_modules .turbo yarn-error.log yarn.lock",
     "updates:check": "ncu --deep",
-    "updates:install": "ncu --deep -u && yarn install"
+    "updates:install": "ncu --deep -u && yarn install",
+    "version": "changeset version",
+    "release": "yarn build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.2",
+    "@changesets/cli": "^2.20.0",
     "prettier": "^2.5.1",
     "prettier-plugin-prisma": "^3.9.0",
     "rimraf": "^3.0.2",

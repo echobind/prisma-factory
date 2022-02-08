@@ -1,3 +1,4 @@
+import type { PrismaPromise } from '@prisma/client';
 import { join } from 'path';
 import { camelCase } from 'change-case';
 
@@ -32,9 +33,9 @@ export function createFactory<CreateInputType, ReturnModelType>(
     },
 
     create: async (attrs: Partial<CreateInputType> = {}) => {
-      const primaClientPath = join(process.cwd(), 'node_modules/@prisma/client');
+      const prismaClientPath = join(process.cwd(), 'node_modules/@prisma/client');
 
-      const { PrismaClient } = await import(primaClientPath);
+      const { PrismaClient } = await import(prismaClientPath);
       const prisma = new PrismaClient();
 
       let data = FactoryFunctions.build(attrs);
@@ -47,10 +48,9 @@ export function createFactory<CreateInputType, ReturnModelType>(
         data = options.beforeCreate(data);
       }
 
-      // TODO: fix the types
-      const prismaModel = camelCase(modelName as unknown as string);
+      const prismaModel = camelCase(modelName);
 
-      const result = await prisma[prismaModel].create({
+      const result: PrismaPromise<ReturnModelType> = await prisma[prismaModel].create({
         data,
         ...prismaOptions,
       });

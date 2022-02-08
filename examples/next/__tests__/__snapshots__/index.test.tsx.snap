@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page renders Home page unchanged 1`] = `
+<div
+  className="css-1tqjqq"
+>
+  <div
+    className="chakra-stack css-owjkmg"
+  >
+    <h1
+      className="chakra-heading css-0"
+    >
+      Statistics
+    </h1>
+    <section
+      className="css-h40t3l"
+    >
+      <div
+        className="css-wllvpf"
+      >
+        <div
+          className="css-1wjac8z"
+        />
+      </div>
+    </section>
+  </div>
+</div>
+`;

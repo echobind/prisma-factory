@@ -27,11 +27,10 @@ export async function generate(options: GeneratorOptions) {
 
     const project = new Project({ compilerOptions: { outDir: outputDir, declaration: true } });
 
-    console.log('Generating factories...');
     const factoryFile = project.createSourceFile('index.ts', undefined, { overwrite: true });
     generateFactories(factoryFile, options.dmmf);
 
-    // Emit js and d.ts
+    // Emit compiled source and type declarations
     await project.emit();
   } catch (e) {
     console.error('Error: unable to write files for Prisma Factory');
