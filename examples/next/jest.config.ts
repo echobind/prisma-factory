@@ -15,7 +15,6 @@ const customJestConfig: Config.InitialOptions = {
     '^src/(.*)$': '<rootDir>/src/$1',
     '^pages/(.*)$': '<rootDir>/pages/$1',
     '^test/(.*)$': '<rootDir>/test/$1',
-    'test-utils': '<rootDir>/test/utils',
   },
 };
 

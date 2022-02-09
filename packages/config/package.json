@@ -1,5 +1,5 @@
 {
-  "name": "config",
+  "name": "@prisma-factory/config",
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -11,6 +11,14 @@
     "eslint-config-prettier": "^8.3.0"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2"
+    "eslint": "^8.8.0",
+    "next": "12.0.10",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "eslint": "^8.8.0",
+    "next": "12.0.10",
+    "typescript": "^4.5.5"
   }
 }

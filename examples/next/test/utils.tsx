@@ -1,17 +1,18 @@
 import type { NextRouter } from 'next/router';
-import { render as defaultRender } from '@testing-library/react';
 import {
+  render as defaultRender,
   renderHook as defaultRenderHook,
+} from '@prisma-factory/test-utils';
+import {
   RenderHookOptions as DefaultRenderHookOptions,
   WrapperComponent,
 } from '@testing-library/react-hooks';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
-import { ChakraProvider } from '@chakra-ui/react';
 
 export * from '@testing-library/react';
 export { handlers } from 'test/mocks/handlers';
 
-export function render(ui: RenderUI, { wrapper, router, ...options }: RenderOptions = {}) {
+export function customRender(ui: RenderUI, { wrapper, router, ...options }: RenderOptions = {}) {
   if (!wrapper) {
     // Add a default context wrapper if one isn't supplied from the test
     // eslint-disable-next-line react/display-name
@@ -33,11 +34,9 @@ export function renderHook<TProps, TResult>(
     // Add a default context wrapper if one isn't supplied from the test
     // eslint-disable-next-line react/display-name
     wrapper = ({ children }) => (
-      <ChakraProvider>
-        <RouterContext.Provider value={{ ...mockRouter, ...router }}>
-          {children}
-        </RouterContext.Provider>
-      </ChakraProvider>
+      <RouterContext.Provider value={{ ...mockRouter, ...router }}>
+        {children}
+      </RouterContext.Provider>
     );
   }
 

@@ -1,5 +1,5 @@
 {
-  "extends": "@prisma-factory/tsconfig/node-library.json",
+  "extends": "@prisma-factory/tsconfig/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": "src"

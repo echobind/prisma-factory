@@ -1,5 +1,5 @@
 {
-  "name": "remix-example",
+  "name": "@prisma-factory/remix-example",
   "private": true,
   "description": "",
   "license": "",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev",
+    "dev": "PORT=3002 remix dev",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
     "db:start": "docker-compose up -d",
@@ -29,14 +29,15 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.0.0-alpha.5",
+    "@prisma-factory/test-utils": "workspace:*",
     "@remix-run/dev": "^1.1.3",
-    "@types/react": "^17.0.24",
-    "@types/react-dom": "^17.0.9",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
     "prisma": "^3.9.1",
     "prisma-factory": "workspace:*",
     "ts-node": "^10.5.0",
     "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.1.2"
+    "typescript": "^4.5.5"
   },
   "engines": {
     "node": ">=14"
