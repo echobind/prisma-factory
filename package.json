@@ -2,19 +2,24 @@
   "name": "@prisma-factory/monorepo",
   "private": true,
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0",
-    "pnpm": ">=6.23"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
+  "workspaces": [
+    "packages/*",
+    "examples/*",
+    "internal/*",
+    "website"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean --parallel && rm -rf .turbo pnpm-lock.yaml .pnpm-debug.log node_modules",
+    "clean": "turbo run clean --parallel && rimraf yarn.lock node_modules",
     "deps:check": "ncu --deep",
     "deps:update": "ncu --deep -u",
     "version": "changeset version",
-    "release": "pnpm run build && changeset publish"
+    "release": "yarn build && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.2",
@@ -22,21 +27,8 @@
     "@types/node": "^17.0.17",
     "prettier": "^2.5.1",
     "prettier-plugin-prisma": "^3.9.0",
+    "rimraf": "^3.0.2",
     "turbo": "^1.1.2"
   },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@babel/core",
-        "@testing-library/dom",
-        "react",
-        "react-dom"
-      ],
-      "allowedVersions": {
-        "react": "*",
-        "react-dom": "*"
-      }
-    }
-  },
-  "packageManager": "pnpm@6.23.0"
+  "packageManager": "yarn@3.2.0-rc.14"
 }

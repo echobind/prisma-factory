@@ -32,7 +32,7 @@ export function customRender(
 export function renderHook<TProps, TResult>(
   hook: RenderHook<TProps, TResult>,
   { wrapper, router, ...options }: RenderHookOptions<TProps> = {}
-): ReturnType<typeof defaultRenderHook> {
+) {
   if (!wrapper) {
     // Add a default context wrapper if one isn't supplied from the test
     // eslint-disable-next-line react/display-name
