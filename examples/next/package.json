@@ -12,7 +12,7 @@
     "test": "jest",
     "test:update": "pnpm run test --updateSnapshot",
     "test:watch": "pnpm run test --watch",
-    "clean": "rimraf .turbo .next node_modules",
+    "clean": "rimraf .turbo .next node_modules .pnpm-debug.log",
     "db:start": "docker-compose up -d",
     "db:generate": "prisma generate"
   },
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.0.0-alpha.5",
+    "@next/env": "^12.0.10",
     "@prisma-factory/config": "workspace:*",
     "@prisma-factory/test-utils": "workspace:*",
     "@prisma-factory/tsconfig": "workspace:*",
@@ -55,6 +56,7 @@
     "ts-jest": "^27.1.3",
     "ts-node": "^10.5.0",
     "tsconfig-paths": "^3.12.0",
+    "tslib": "^2.3.1",
     "typescript": "^4.5.5"
   },
   "msw": {

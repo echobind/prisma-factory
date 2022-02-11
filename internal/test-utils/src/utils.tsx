@@ -8,7 +8,10 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 export * from '@testing-library/react';
 
-export function render(ui: RenderUI, { wrapper, ...options }: RenderOptions = {}) {
+export function render(
+  ui: RenderUI,
+  { wrapper, ...options }: RenderOptions = {}
+): ReturnType<typeof defaultRender> {
   if (!wrapper) {
     // Add a default context wrapper if one isn't supplied from the test
     // eslint-disable-next-line react/display-name

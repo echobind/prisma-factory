@@ -12,7 +12,10 @@ import { RouterContext } from 'next/dist/shared/lib/router-context';
 export * from '@testing-library/react';
 export { handlers } from 'test/mocks/handlers';
 
-export function customRender(ui: RenderUI, { wrapper, router, ...options }: RenderOptions = {}) {
+export function customRender(
+  ui: RenderUI,
+  { wrapper, router, ...options }: RenderOptions = {}
+): ReturnType<typeof defaultRender> {
   if (!wrapper) {
     // Add a default context wrapper if one isn't supplied from the test
     // eslint-disable-next-line react/display-name
@@ -29,7 +32,7 @@ export function customRender(ui: RenderUI, { wrapper, router, ...options }: Rend
 export function renderHook<TProps, TResult>(
   hook: RenderHook<TProps, TResult>,
   { wrapper, router, ...options }: RenderHookOptions<TProps> = {}
-) {
+): ReturnType<typeof defaultRenderHook> {
   if (!wrapper) {
     // Add a default context wrapper if one isn't supplied from the test
     // eslint-disable-next-line react/display-name
