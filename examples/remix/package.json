@@ -1,5 +1,5 @@
 {
-  "name": "@prisma-factory/remix-example",
+  "name": "remix-example",
   "private": true,
   "description": "",
   "license": "",
@@ -15,25 +15,25 @@
     "db:generate": "prisma generate"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.3",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@prisma/client": "^3.9.2",
-    "@remix-run/react": "^1.1.3",
-    "@remix-run/serve": "^1.1.3",
-    "framer-motion": "^6.2.6",
+    "@chakra-ui/react": "^1.8.5",
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@prisma/client": "^3.10.0",
+    "@remix-run/react": "^1.2.2",
+    "@remix-run/serve": "^1.2.2",
+    "framer-motion": "^6.2.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "remix": "^1.1.3"
+    "remix": "^1.2.2"
   },
   "devDependencies": {
-    "@faker-js/faker": "^6.0.0-alpha.6",
+    "@faker-js/faker": "^6.0.0-alpha.7",
     "@prisma-factory/test-utils": "workspace:*",
-    "@remix-run/dev": "^1.1.3",
+    "@remix-run/dev": "^1.2.2",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
-    "prisma": "^3.9.2",
+    "prisma": "^3.10.0",
     "prisma-factory": "workspace:*",
     "ts-node": "^10.5.0",
     "tsconfig-paths": "^3.12.0",
