@@ -1,4 +1,4 @@
-import type { PrismaPromise } from '@prisma/client';
+import type { PrismaPromise } from 'prisma/client';
 import { join } from 'path';
 import { camelCase } from 'change-case';
 

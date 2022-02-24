@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from 'prisma/client';
 
-import { createUser } from '../prisma/factories/user';
+import { createUser } from 'prisma/factories/user';
 
 const prisma = new PrismaClient();
 

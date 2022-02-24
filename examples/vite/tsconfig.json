@@ -25,5 +25,5 @@
     "transpileOnly": true,
     "require": ["tsconfig-paths/register"]
   },
-  "include": ["./src"]
+  "include": ["./src", "./scripts"]
 }

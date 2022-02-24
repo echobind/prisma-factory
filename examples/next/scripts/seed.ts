@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from 'prisma/client';
 
 import { createTeamMember } from 'prisma/factories/team';
 

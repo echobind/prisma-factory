@@ -1,5 +1,4 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "isolatedModules": true,
@@ -17,6 +16,7 @@
     // Remix takes care of building everything in `remix build`.
     "noEmit": true
   },
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"

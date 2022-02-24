@@ -10,6 +10,7 @@ const DEFAULT_FILENAME = 'factories.ts';
 
 export async function generate(options: GeneratorOptions) {
   const { output, config } = options.generator;
+
   const outputDir = parseEnvValue(output!);
 
   // const fileName = config.outputName || DEFAULT_FILENAME;

@@ -8,6 +8,8 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
+  // Generate into custom location because this repo has multiple prisma schemas
+  output   = "./client"
 }
 
 generator factories {
