@@ -9,9 +9,11 @@ import { generateFactories } from '../generator/factories';
 const DEFAULT_FILENAME = 'factories.ts';
 
 export async function generate(options: GeneratorOptions) {
-  const { output, config } = options.generator;
+  const prismaClientOutput = options.otherGenerators.find(
+    (gen) => gen.provider.value === 'prisma-client-js'
+  )!.output!.value;
 
-  const outputDir = parseEnvValue(output!);
+  const outputDir = parseEnvValue(options.generator.output!);
 
   // const fileName = config.outputName || DEFAULT_FILENAME;
 
@@ -29,7 +31,7 @@ export async function generate(options: GeneratorOptions) {
     const project = new Project({ compilerOptions: { outDir: outputDir, declaration: true } });
 
     const factoryFile = project.createSourceFile('index.ts', undefined, { overwrite: true });
-    generateFactories(factoryFile, options.dmmf);
+    generateFactories(factoryFile, options.dmmf, { client: prismaClientOutput });
 
     // Emit compiled source and type declarations
     await project.emit();

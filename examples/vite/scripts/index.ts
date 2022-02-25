@@ -1,7 +1,7 @@
-import { createUser } from '../prisma/factories/user';
+import { createTeamMember } from '../prisma/factories/team';
 
 async function main() {
-  const data = await createUser();
+  const data = await createTeamMember();
   console.log(data);
 }
 

@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { createTeamMemberFactory } from '.prisma-factory/factories';
+import { createTeamMemberFactory } from 'prisma-factory/generated';
 
 export const createTeamMember = () => {
   const TeamMemberFactory = createTeamMemberFactory();

@@ -1,8 +1,14 @@
 {
-  "name": "remix-example",
+  "name": "@prisma-factory/remix-example",
   "private": true,
-  "description": "",
-  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:echobind/prisma-factory.git",
+    "directory": "examples/remix"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
   "prisma": {
     "seed": "ts-node scripts/seed.ts"
   },
@@ -11,6 +17,7 @@
     "dev": "PORT=3002 remix dev",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
+    "clean": "rimraf .turbo .cache build public/build node_modules prisma/client",
     "db:start": "docker-compose up -d",
     "db:generate": "prisma generate"
   },
@@ -29,12 +36,12 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.0.0-alpha.7",
-    "@prisma-factory/test-utils": "workspace:*",
+    "@prisma-factory/test-utils": "workspace:^",
     "@remix-run/dev": "^1.2.2",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "prisma": "^3.10.0",
-    "prisma-factory": "workspace:*",
+    "prisma-factory": "workspace:^",
     "ts-node": "^10.5.0",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.5"

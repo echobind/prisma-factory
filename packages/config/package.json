@@ -19,5 +19,16 @@
     "eslint": "^8.9.0",
     "next": "12.1.0",
     "typescript": "^4.5.5"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   }
 }

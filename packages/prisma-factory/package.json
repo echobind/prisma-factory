@@ -15,6 +15,9 @@
     "factory",
     "factories"
   ],
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -41,7 +44,7 @@
     "dev": "tsup src/index.ts src/generator.ts --format cjs,esm --watch --onSuccess \"yarn prisma:generate\"",
     "build": "tsup src/index.ts src/generator.ts --format cjs,esm --dts-resolve",
     "format": "prettier --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
-    "clean": "rimraf .turbo node_modules dist",
+    "clean": "rimraf .turbo node_modules dist prisma/client",
     "migrate:dev": "prisma migrate dev",
     "migrate:dev:create": "prisma migrate dev --create-only",
     "migrate:reset": "prisma migrate reset",
@@ -64,8 +67,8 @@
     "ts-morph": "^13.0.3"
   },
   "devDependencies": {
-    "@prisma-factory/config": "workspace:*",
-    "@prisma-factory/tsconfig": "workspace:*",
+    "@prisma-factory/config": "workspace:^",
+    "@prisma-factory/tsconfig": "workspace:^",
     "@prisma/client": "^3.10.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.21",

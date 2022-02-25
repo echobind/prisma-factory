@@ -14,6 +14,6 @@
     "transpileOnly": true,
     "require": ["tsconfig-paths/register"]
   },
-  "exclude": ["node_modules", "prisma/client"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
