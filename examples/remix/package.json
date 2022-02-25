@@ -1,13 +1,10 @@
 {
-  "name": "@prisma-factory/remix-example",
+  "name": "remix-example",
   "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:echobind/prisma-factory.git",
     "directory": "examples/remix"
-  },
-  "installConfig": {
-    "hoistingLimits": "workspaces"
   },
   "prisma": {
     "seed": "ts-node scripts/seed.ts"
@@ -15,9 +12,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "PORT=3002 remix dev",
-    "postinstall": "remix setup node",
+    "postinstall": "rm -f node_modules/remix/index.d.ts && remix setup node",
     "start": "remix-serve build",
-    "clean": "rimraf .turbo .cache build public/build node_modules prisma/client",
+    "clean": "rimraf .turbo .cache build public/build node_modules prisma/client prisma/generated",
     "db:start": "docker-compose up -d",
     "db:generate": "prisma generate"
   },
@@ -35,6 +32,7 @@
     "remix": "^1.2.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
     "@faker-js/faker": "^6.0.0-alpha.7",
     "@prisma-factory/test-utils": "workspace:^",
     "@remix-run/dev": "^1.2.2",
@@ -49,5 +47,8 @@
   "engines": {
     "node": ">=14"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "peerDependencies": {
+    "@babel/core": "^7.17.5"
+  }
 }

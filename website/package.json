@@ -10,7 +10,7 @@
     "clean": "rimraf .turbo node_modules .next"
   },
   "dependencies": {
-    "next": "12.1.0",
+    "next": "12.1.1-canary.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -20,7 +20,7 @@
     "@types/node": "^17.0.21",
     "@types/react": "17.0.39",
     "eslint": "8.9.0",
-    "eslint-config-next": "^12.1.0",
+    "eslint-config-next": "^12.1.1-canary.3",
     "eslint-config-prettier": "^8.4.0",
     "next-transpile-modules": "9.0.0",
     "rimraf": "^3.0.2",

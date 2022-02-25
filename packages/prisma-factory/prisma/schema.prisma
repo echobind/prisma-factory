@@ -14,6 +14,7 @@ generator client {
 
 generator factories {
   provider = "ts-node src/generator.ts"
+  output   = "./generated"
 }
 
 model User {

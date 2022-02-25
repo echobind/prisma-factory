@@ -1,8 +1,7 @@
 import { GeneratorOptions } from '@prisma/generator-helper';
 import { Project } from 'ts-morph';
 import { parseEnvValue } from '@prisma/sdk';
-import { promises } from 'fs';
-// import { join } from 'path';
+
 import { generateFactories } from '../generator/factories';
 
 // const { mkdir, writeFile } = promises;

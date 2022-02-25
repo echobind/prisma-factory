@@ -4,18 +4,12 @@
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
-  "workspaces": [
-    "packages/*",
-    "examples/*",
-    "internal/*",
-    "website"
-  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean --parallel && rimraf yarn.lock node_modules",
+    "clean": "turbo run clean --parallel && rimraf yarn.lock && rimraf node_modules",
     "deps:check": "ncu --deep",
     "deps:update": "ncu --deep -u",
     "version": "changeset version",
@@ -28,7 +22,7 @@
     "prettier": "^2.5.1",
     "prettier-plugin-prisma": "^3.10.0",
     "rimraf": "^3.0.2",
-    "turbo": "^1.1.3"
+    "turbo": "^1.1.4"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "pnpm@6.32.1"
 }
