@@ -56,5 +56,6 @@
   "peerDependencies": {
     "@babel/core": "^7.17.5",
     "@testing-library/dom": "^8.11.3"
-  }
+  },
+  "version": null
 }

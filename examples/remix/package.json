@@ -51,5 +51,6 @@
   "sideEffects": false,
   "peerDependencies": {
     "@babel/core": "^7.17.5"
-  }
+  },
+  "version": null
 }
