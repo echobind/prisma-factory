@@ -23,5 +23,5 @@
     "rimraf": "^3.0.2",
     "turbo": "^1.1.4"
   },
-  "packageManager": "pnpm@6.32.1"
+  "packageManager": "pnpm@6.23.5"
 }
