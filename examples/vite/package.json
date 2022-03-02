@@ -18,7 +18,7 @@
     "db:generate": "prisma generate"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.5",
+    "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
     "@prisma/client": "^3.10.0",
@@ -36,18 +36,19 @@
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
+    "@types/react-dom": "^17.0.12",
     "@vitejs/plugin-react": "^1.2.0",
-    "@vitest/ui": "^0.5.5",
+    "@vitest/ui": "^0.5.9",
     "msw": "^0.38.1",
+    "prettier-plugin-prisma": "^3.10.0",
     "prisma": "^3.10.0",
     "prisma-factory": "workspace:^",
-    "ts-node": "^10.5.0",
+    "ts-node": "^10.6.0",
     "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.5.5",
-    "vite": "^2.8.4",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6",
     "vite-tsconfig-paths": "^3.4.1",
-    "vitest": "^0.5.5"
+    "vitest": "^0.5.9"
   },
   "msw": {
     "workerDirectory": "public"

@@ -9,18 +9,17 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean --parallel && rimraf yarn.lock && rimraf node_modules",
+    "clean": "turbo run clean --parallel && rimraf pnpm-lock.yaml && rimraf node_modules",
     "deps:check": "ncu --deep",
     "deps:update": "ncu --deep -u",
     "version": "changeset version",
-    "release": "yarn build && changeset publish"
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.3",
     "@changesets/cli": "^2.21.0",
     "@types/node": "^17.0.21",
     "prettier": "^2.5.1",
-    "prettier-plugin-prisma": "^3.10.0",
     "rimraf": "^3.0.2",
     "turbo": "^1.1.4"
   },

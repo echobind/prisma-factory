@@ -34,7 +34,7 @@ function addModelFactoryFunction(
 
   newFunction.setBodyText(
     options.client
-      ? `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs, { client: ${options.client} }); `
+      ? `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs, { client: '${options.client}' }); `
       : `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs); `
   );
 

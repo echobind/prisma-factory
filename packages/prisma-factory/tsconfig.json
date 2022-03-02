@@ -3,6 +3,13 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "examples", "__tests__"]
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": ["src"]
 }

@@ -43,14 +43,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
-    "@chakra-ui/react": "^1.8.5",
+    "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
     "@prisma-factory/config": "workspace:^",
     "@prisma-factory/tsconfig": "workspace:^",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.21",
-    "eslint": "^8.9.0",
+    "eslint": "^8.10.0",
     "framer-motion": "^6.2.8",
     "jest": "^27.5.1",
     "react": "^17.0.2",
@@ -58,8 +58,8 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.3",
     "tsup": "^5.11.13",
-    "typescript": "^4.5.5",
-    "vitest": "^0.5.5"
+    "typescript": "^4.6.2",
+    "vitest": "^0.5.9"
   },
   "peerDependencies": {
     "@babel/core": "^7.17.5",
