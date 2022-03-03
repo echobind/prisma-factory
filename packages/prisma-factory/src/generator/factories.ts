@@ -29,7 +29,7 @@ function addModelFactoryFunction(
   });
 
   newFunction.insertParameters(0, [
-    { name: 'requiredAttrs', type: `Partial<${model.name}>`, hasQuestionToken: true },
+    { name: 'requiredAttrs', type: `Partial<${model.name}CreateInput>`, hasQuestionToken: true },
   ]);
 
   newFunction.setBodyText(
