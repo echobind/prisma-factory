@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.2
+
+### Patch Changes
+
+- Clean up import logic around prisma client imports in generated factory functions.
+
 ## 0.1.1
 
 ### Patch Changes
