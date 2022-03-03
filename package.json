@@ -12,6 +12,7 @@
     "clean": "turbo run clean --parallel && rimraf pnpm-lock.yaml && rimraf node_modules",
     "deps:check": "ncu --deep",
     "deps:update": "ncu --deep -u",
+    "changeset": "changeset add",
     "version": "changeset version",
     "release": "pnpm build && changeset publish"
   },
