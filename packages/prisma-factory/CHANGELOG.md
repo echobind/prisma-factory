@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.3
+
+### Patch Changes
+
+- Allow usage of global prisma client when available to prevent overloading clients in test/development.
+
 ## 0.1.2
 
 ### Patch Changes

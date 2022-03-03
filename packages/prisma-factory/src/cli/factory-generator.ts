@@ -32,7 +32,10 @@ export async function generate(options: GeneratorOptions) {
 
     const factoryFile = project.createSourceFile('index.ts', undefined, { overwrite: true });
     generateFactories(factoryFile, options.dmmf, {
-      client: relative(outputDir, prismaClientOutput),
+      client:
+        prismaClientOutput === '@prisma/client'
+          ? '@prisma/client'
+          : relative(outputDir, prismaClientOutput),
     });
 
     // Emit compiled source and type declarations

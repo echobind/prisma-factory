@@ -1,6 +1,6 @@
 import { camelCase } from 'change-case';
 
-import { buildPrismaInclude } from './buildPrismaInclude';
+import { getPrismaClient, buildPrismaInclude } from './utils';
 
 export interface CreateFactoryOptions<CreateInputType> {
   client?: string;
@@ -33,9 +33,13 @@ export function createFactory<CreateInputType, ReturnModelType>(
 
     create: async (attrs: Partial<CreateInputType> = {}) => {
       const prismaClientPath = options.client ?? '@prisma/client';
+      const { PrismaClient } = await getPrismaClient(prismaClientPath);
 
-      const { PrismaClient } = await import(prismaClientPath);
-      const prisma = new PrismaClient();
+      if (!global['prisma']) {
+        global['prisma'] = new PrismaClient();
+      }
+
+      prisma = global['prisma'];
 
       let data = FactoryFunctions.build(attrs);
       const prismaOptions: Record<string, any> = {};
