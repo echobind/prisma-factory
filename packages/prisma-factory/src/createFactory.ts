@@ -1,5 +1,3 @@
-import type { PrismaPromise } from 'prisma/client';
-import { join } from 'path';
 import { camelCase } from 'change-case';
 
 import { buildPrismaInclude } from './buildPrismaInclude';
@@ -34,7 +32,7 @@ export function createFactory<CreateInputType, ReturnModelType>(
     },
 
     create: async (attrs: Partial<CreateInputType> = {}) => {
-      const prismaClientPath = options.client ?? join(process.cwd(), 'node_modules/@prisma/client');
+      const prismaClientPath = options.client ?? '@prisma/client';
 
       const { PrismaClient } = await import(prismaClientPath);
       const prisma = new PrismaClient();
@@ -51,7 +49,7 @@ export function createFactory<CreateInputType, ReturnModelType>(
 
       const prismaModel = camelCase(modelName);
 
-      const result: PrismaPromise<ReturnModelType> = await prisma[prismaModel].create({
+      const result: Promise<ReturnModelType> = await prisma[prismaModel].create({
         data,
         ...prismaOptions,
       });

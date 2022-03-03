@@ -2,7 +2,7 @@ import { DMMF } from '@prisma/client/runtime';
 import { SourceFile } from 'ts-morph';
 
 type GenerateFactoriesOptions = {
-  client?: string;
+  client: string;
 };
 
 /**
@@ -29,7 +29,11 @@ function addModelFactoryFunction(
   });
 
   newFunction.insertParameters(0, [
-    { name: 'requiredAttrs', type: `Partial<${model.name}CreateInput>`, hasQuestionToken: true },
+    {
+      name: 'requiredAttrs',
+      type: `Partial<Prisma.${model.name}CreateInput>`,
+      hasQuestionToken: true,
+    },
   ]);
 
   newFunction.setBodyText(
@@ -60,7 +64,7 @@ function addImports(
       namedImports: ['createFactory', 'CreateFactoryReturn'],
     },
     {
-      moduleSpecifier: options.client ?? '@prisma/client',
+      moduleSpecifier: options.client,
       namedImports: prismaImports,
     },
   ]);
@@ -72,8 +76,8 @@ function addImports(
 export function generateFactories(
   sourceFile: SourceFile,
   dmmf: DMMF.Document,
-  options: GenerateFactoriesOptions = {}
+  options: GenerateFactoriesOptions
 ) {
-  addImports(sourceFile, dmmf, options);
-  addFactoryFunctions(sourceFile, dmmf, options);
+  addImports(sourceFile, dmmf, { client: options.client ?? '@prisma/client' });
+  addFactoryFunctions(sourceFile, dmmf, { client: options.client ?? '@prisma/client' });
 }

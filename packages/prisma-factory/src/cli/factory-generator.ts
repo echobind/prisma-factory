@@ -1,6 +1,7 @@
 import { GeneratorOptions } from '@prisma/generator-helper';
 import { Project } from 'ts-morph';
 import { parseEnvValue } from '@prisma/sdk';
+import { relative } from 'path';
 
 import { generateFactories } from '../generator/factories';
 
@@ -30,7 +31,9 @@ export async function generate(options: GeneratorOptions) {
     const project = new Project({ compilerOptions: { outDir: outputDir, declaration: true } });
 
     const factoryFile = project.createSourceFile('index.ts', undefined, { overwrite: true });
-    generateFactories(factoryFile, options.dmmf, { client: prismaClientOutput });
+    generateFactories(factoryFile, options.dmmf, {
+      client: relative(outputDir, prismaClientOutput),
+    });
 
     // Emit compiled source and type declarations
     await project.emit();
