@@ -31,7 +31,7 @@ function addModelFactoryFunction(
   newFunction.insertParameters(0, [
     {
       name: 'requiredAttrs',
-      type: `Partial<Prisma.${model.name}CreateInput>`,
+      type: `Partial<MaybeCallback<Prisma.${model.name}CreateInput>>`,
       hasQuestionToken: true,
     },
   ]);
@@ -42,7 +42,9 @@ function addModelFactoryFunction(
       : `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs); `
   );
 
-  newFunction.setReturnType(`CreateFactoryReturn<Prisma.${model.name}CreateInput, ${model.name}>`);
+  newFunction.setReturnType(
+    `CreateFactoryReturn<MaybeCallback<Prisma.${model.name}CreateInput>, ${model.name}>`
+  );
 
   newFunction.setIsExported(true);
 }
@@ -59,6 +61,15 @@ function addImports(
   const prismaImports = ['Prisma'].concat(modelNames);
 
   sourceFile.addImportDeclarations([
+    {
+      moduleSpecifier: 'prisma-factory',
+      namedImports: ['MaybeCallback'],
+      isTypeOnly: true,
+    },
+    {
+      moduleSpecifier: 'prisma-factory',
+      namedImports: ['createFactory', 'CreateFactoryReturn'],
+    },
     {
       moduleSpecifier: 'prisma-factory',
       namedImports: ['createFactory', 'CreateFactoryReturn'],

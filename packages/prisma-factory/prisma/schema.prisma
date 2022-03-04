@@ -18,7 +18,7 @@ generator factories {
 }
 
 model User {
-  user_id Int     @id @default(autoincrement())
+  id      String  @id @default(cuid())
   name    String?
   email   String  @unique
   isAdmin Boolean @default(false)

@@ -5,9 +5,6 @@ import { relative } from 'path';
 
 import { generateFactories } from '../generator/factories';
 
-// const { mkdir, writeFile } = promises;
-const DEFAULT_FILENAME = 'factories.ts';
-
 export async function generate(options: GeneratorOptions) {
   const prismaClientOutput = options.otherGenerators.find(
     (gen) => gen.provider.value === 'prisma-client-js'
@@ -15,27 +12,12 @@ export async function generate(options: GeneratorOptions) {
 
   const outputDir = parseEnvValue(options.generator.output!);
 
-  // const fileName = config.outputName || DEFAULT_FILENAME;
-
-  // console.log('hello', JSON.stringify(options.dmmf))
-
   try {
-    // await mkdir(outputDir, { recursive: true });
-
-    // await writeFile('./test.json', JSON.stringify(options.dmmf.datamodel));
-
-    // const factoryFunctions = generateFactoryFunctions(options.dmmf);
-
-    // await writeFile(join(outputDir, fileName), factoryFunctions);
-
     const project = new Project({ compilerOptions: { outDir: outputDir, declaration: true } });
 
     const factoryFile = project.createSourceFile('index.ts', undefined, { overwrite: true });
     generateFactories(factoryFile, options.dmmf, {
-      client:
-        prismaClientOutput === '@prisma/client'
-          ? '@prisma/client'
-          : relative(outputDir, prismaClientOutput),
+      client: relative(outputDir, prismaClientOutput),
     });
 
     // Emit compiled source and type declarations

@@ -9,14 +9,14 @@ importers:
       '@types/node': ^17.0.21
       prettier: ^2.5.1
       rimraf: ^3.0.2
-      turbo: ^1.1.4
+      turbo: ^1.1.5
     devDependencies:
       '@changesets/changelog-github': 0.4.3
       '@changesets/cli': 2.21.0
       '@types/node': 17.0.21
       prettier: 2.5.1
       rimraf: 3.0.2
-      turbo: 1.1.4
+      turbo: 1.1.5
 
   examples/remix:
     specifiers:
@@ -31,7 +31,8 @@ importers:
       '@remix-run/react': ^1.2.3
       '@remix-run/serve': ^1.2.3
       '@types/react': ^17.0.39
-      '@types/react-dom': ^17.0.12
+      '@types/react-dom': ^17.0.13
+      cuid: ^2.1.8
       framer-motion: ^6.2.8
       prettier-plugin-prisma: ^3.10.0
       prisma: ^3.10.0
@@ -41,7 +42,7 @@ importers:
       react-icons: ^4.3.1
       remix: ^1.2.3
       ts-node: ^10.6.0
-      tsconfig-paths: ^3.12.0
+      tsconfig-paths: ^3.13.0
       typescript: ^4.6.2
     dependencies:
       '@chakra-ui/react': 1.8.6_189e00a0932443dc19f4914207ca4c5f
@@ -62,11 +63,12 @@ importers:
       '@remix-run/dev': 1.2.3_react-dom@17.0.2+react@17.0.2
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.13
+      cuid: 2.1.8
       prettier-plugin-prisma: 3.10.0_prettier@2.5.1
       prisma: 3.10.0
       prisma-factory: link:../../packages/prisma-factory
       ts-node: 10.6.0_e79e62fe450383fd2d418267dc75e645
-      tsconfig-paths: 3.12.0
+      tsconfig-paths: 3.13.0
       typescript: 4.6.2
 
   examples/vite:
@@ -83,11 +85,12 @@ importers:
       '@testing-library/react': ^12.1.3
       '@testing-library/user-event': ^13.5.0
       '@types/react': ^17.0.39
-      '@types/react-dom': ^17.0.12
+      '@types/react-dom': ^17.0.13
       '@vitejs/plugin-react': ^1.2.0
       '@vitest/ui': ^0.5.9
+      cuid: ^2.1.8
       framer-motion: ^6.2.8
-      msw: ^0.38.1
+      msw: ^0.38.2
       prettier-plugin-prisma: ^3.10.0
       prisma: ^3.10.0
       prisma-factory: workspace:^
@@ -95,7 +98,7 @@ importers:
       react-dom: ^17.0.2
       react-icons: ^4.3.1
       ts-node: ^10.6.0
-      tsconfig-paths: ^3.12.0
+      tsconfig-paths: ^3.13.0
       typescript: ^4.6.2
       vite: ^2.8.6
       vite-tsconfig-paths: ^3.4.1
@@ -121,12 +124,13 @@ importers:
       '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
       '@vitest/ui': 0.5.9
+      cuid: 2.1.8
       msw: 0.38.2
       prettier-plugin-prisma: 3.10.0_prettier@2.5.1
       prisma: 3.10.0
       prisma-factory: link:../../packages/prisma-factory
       ts-node: 10.6.0_e79e62fe450383fd2d418267dc75e645
-      tsconfig-paths: 3.12.0
+      tsconfig-paths: 3.13.0
       typescript: 4.6.2
       vite: 2.8.6
       vite-tsconfig-paths: 3.4.1_vite@2.8.6
@@ -183,7 +187,7 @@ importers:
     specifiers:
       eslint: ^8.10.0
       eslint-config-next: ^12.1.1-canary.3
-      eslint-config-prettier: ^8.4.0
+      eslint-config-prettier: ^8.5.0
       next: 12.1.0
       react: ^17.0.2
       react-dom: ^17.0.2
@@ -207,7 +211,7 @@ importers:
       '@prisma/sdk': ^3.10.0
       '@types/jest': ^27.4.1
       '@types/node': ^17.0.21
-      change-case: ^4.1.2
+      camel-case: ^4.1.2
       eslint: ^8.10.0
       execa: ^6.1.0
       jest: ^27.5.1
@@ -217,9 +221,9 @@ importers:
       release-it: ^14.12.5
       rimraf: ^3.0.2
       ts-jest: ^27.1.3
-      ts-morph: ^13.0.3
+      ts-morph: ^14.0.0
       ts-node: ^10.6.0
-      tsconfig-paths: ^3.12.0
+      tsconfig-paths: ^3.13.0
       tslib: ^2.3.1
       tsup: ^5.11.13
       typescript: ^4.6.2
@@ -228,8 +232,8 @@ importers:
     dependencies:
       '@prisma/generator-helper': 3.10.0
       '@prisma/sdk': 3.10.0
-      change-case: 4.1.2
-      ts-morph: 13.0.3
+      camel-case: 4.1.2
+      ts-morph: 14.0.0
     devDependencies:
       '@prisma-factory/config': link:../config
       '@prisma-factory/tsconfig': link:../tsconfig
@@ -246,7 +250,7 @@ importers:
       rimraf: 3.0.2
       ts-jest: 27.1.3_60149d457e34ffba7d4e845dde6a1263
       ts-node: 10.6.0_e79e62fe450383fd2d418267dc75e645
-      tsconfig-paths: 3.12.0
+      tsconfig-paths: 3.13.0
       tslib: 2.3.1
       tsup: 5.11.13_ts-node@10.6.0+typescript@4.6.2
       typescript: 4.6.2
@@ -264,7 +268,7 @@ importers:
       '@types/react': 17.0.39
       eslint: 8.10.0
       eslint-config-next: ^12.1.1-canary.3
-      eslint-config-prettier: ^8.4.0
+      eslint-config-prettier: ^8.5.0
       next: 12.1.1-canary.3
       next-transpile-modules: 9.0.0
       react: 17.0.2
@@ -1357,7 +1361,7 @@ packages:
     resolution: {integrity: sha512-uhWMNAfkk1DFAQ4nKu+t23WBQ1/XSJq8Y3sBZJQpvopfwOcarbVvEiM5voSUWPA7pkpD/BprGM7zjIRockUcmw==}
     dependencies:
       '@chakra-ui/utils': 1.10.4
-      csstype: 3.0.10
+      csstype: 3.0.11
 
   /@chakra-ui/switch/1.3.8_8548d53eb8615e8e5949b9b41b874f64:
     resolution: {integrity: sha512-xcsq4G9YUNRSp0F+XBDjeGZFlJeEdGJptuixk6PZjqRJYUyH+k2bk1bJ2Bv2bjvmkDCojI42MkvWTLHrOqp41A==}
@@ -1842,7 +1846,7 @@ packages:
       '@emotion/memoize': 0.7.5
       '@emotion/unitless': 0.7.5
       '@emotion/utils': 1.1.0
-      csstype: 3.0.10
+      csstype: 3.0.11
 
   /@emotion/sheet/1.1.0:
     resolution: {integrity: sha512-u0AX4aSo25sMAygCuQTzS+HsImZFuS8llY8O7b9MDRzbJM0kVJlAz6KNDqcG7pOuQZJmj/8X/rAW+66kMnMW+g==}
@@ -3138,11 +3142,11 @@ packages:
     engines: {node: '>= 10'}
     dev: false
 
-  /@ts-morph/common/0.12.3:
-    resolution: {integrity: sha512-4tUmeLyXJnJWvTFOKtcNJ1yh0a3SsTLi2MUoyj8iUNznFRN1ZquaNe7Oukqrnki2FzZkm0J9adCNLDZxUzvj+w==}
+  /@ts-morph/common/0.13.0:
+    resolution: {integrity: sha512-fEJ6j7Cu8yiWjA4UmybOBH9Efgb/64ZTWuvCF4KysGu4xz8ettfyaqFt8WZ1btCxXsGZJjZ2/3svOF6rL+UFdQ==}
     dependencies:
       fast-glob: 3.2.11
-      minimatch: 3.1.2
+      minimatch: 5.0.1
       mkdirp: 1.0.4
       path-browserify: 1.0.1
     dev: false
@@ -3387,7 +3391,7 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
-      csstype: 3.0.10
+      csstype: 3.0.11
 
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -4009,6 +4013,12 @@ packages:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
+  /brace-expansion/2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: false
+
   /braces/3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
     engines: {node: '>=8'}
@@ -4194,14 +4204,6 @@ packages:
   /caniuse-lite/1.0.30001312:
     resolution: {integrity: sha512-Wiz1Psk2MEK0pX3rUzWaunLTZzqS2JYZFzNKqAiJGiuxIjRPLgV6+VDPOg6lQOUxmDwhTlh198JsTTi8Hzw6aQ==}
 
-  /capital-case/1.0.4:
-    resolution: {integrity: sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==}
-    dependencies:
-      no-case: 3.0.4
-      tslib: 2.3.1
-      upper-case-first: 2.0.2
-    dev: false
-
   /chai/4.3.6:
     resolution: {integrity: sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==}
     engines: {node: '>=4'}
@@ -4249,23 +4251,6 @@ packages:
     resolution: {integrity: sha512-/duVOqst+luxCQRKEo4bNxinsOQtMP80ZYm7mMqzuh5PociNL0PvmHFvREJ9ueYL2TxlHjBcmLCdmocx9Vg+IQ==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
-
-  /change-case/4.1.2:
-    resolution: {integrity: sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==}
-    dependencies:
-      camel-case: 4.1.2
-      capital-case: 1.0.4
-      constant-case: 3.0.4
-      dot-case: 3.0.4
-      header-case: 2.0.4
-      no-case: 3.0.4
-      param-case: 3.0.4
-      pascal-case: 3.1.2
-      path-case: 3.0.4
-      sentence-case: 3.0.4
-      snake-case: 3.0.4
-      tslib: 2.3.1
-    dev: false
 
   /char-regex/1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
@@ -4507,14 +4492,6 @@ packages:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: true
 
-  /constant-case/3.0.4:
-    resolution: {integrity: sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==}
-    dependencies:
-      no-case: 3.0.4
-      tslib: 2.3.1
-      upper-case: 2.0.2
-    dev: false
-
   /content-disposition/0.5.4:
     resolution: {integrity: sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==}
     engines: {node: '>= 0.6'}
@@ -4650,8 +4627,8 @@ packages:
       cssom: 0.3.8
     dev: true
 
-  /csstype/3.0.10:
-    resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==}
+  /csstype/3.0.11:
+    resolution: {integrity: sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==}
 
   /csv-generate/3.4.3:
     resolution: {integrity: sha512-w/T+rqR0vwvHqWs/1ZyMDWtHHSJaN06klRqJXBEpDJaM/+dZkso0OKh1VcuuYvK3XM53KysVNq8Ko/epCK8wOw==}
@@ -4673,6 +4650,10 @@ packages:
       csv-parse: 4.16.3
       csv-stringify: 5.6.5
       stream-transform: 2.1.3
+    dev: true
+
+  /cuid/2.1.8:
+    resolution: {integrity: sha512-xiEMER6E7TlTPnDxrM4eRiC6TRgjNX9xzEZ5U/Se2YJKr7Mq4pJn/2XEHjl3STcSh96GmkHPcBXLES8M29wyyg==}
     dev: true
 
   /damerau-levenshtein/1.0.8:
@@ -4916,13 +4897,6 @@ packages:
     dependencies:
       webidl-conversions: 5.0.0
     dev: true
-
-  /dot-case/3.0.4:
-    resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
-    dependencies:
-      no-case: 3.0.4
-      tslib: 2.3.1
-    dev: false
 
   /dot-prop/5.3.0:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
@@ -5731,7 +5705,7 @@ packages:
       glob: 7.2.0
       is-glob: 4.0.3
       resolve: 1.22.0
-      tsconfig-paths: 3.12.0
+      tsconfig-paths: 3.13.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5761,7 +5735,7 @@ packages:
       minimatch: 3.1.2
       object.values: 1.1.5
       resolve: 1.22.0
-      tsconfig-paths: 3.12.0
+      tsconfig-paths: 3.13.0
 
   /eslint-plugin-jsx-a11y/6.5.1_eslint@8.10.0:
     resolution: {integrity: sha512-sVCFKX9fllURnXT2JwLN5Qgo24Ug5NF6dxhkmxsMEUZhXRcGg+X3e1JbJ84YePQKBl5E0ZjAH5Q4rkdcGY99+g==}
@@ -6655,13 +6629,6 @@ packages:
   /hast-util-whitespace/2.0.0:
     resolution: {integrity: sha512-Pkw+xBHuV6xFeJprJe2BBEoDV+AvQySaz3pPDRUs5PNZEMQjpXJJueqrpcHIXxnWTcAGi/UOCgVShlkY6kLoqg==}
     dev: true
-
-  /header-case/2.0.4:
-    resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
-    dependencies:
-      capital-case: 1.0.4
-      tslib: 2.3.1
-    dev: false
 
   /headers-polyfill/3.0.4:
     resolution: {integrity: sha512-I1DOM1EdWYntdrnCvqQtcKwSSuiTzoqOExy4v1mdcFixFZABlWP4IPHdmoLtPda0abMHqDOY4H9svhQ10DFR4w==}
@@ -8705,6 +8672,13 @@ packages:
     dependencies:
       brace-expansion: 1.1.11
 
+  /minimatch/5.0.1:
+    resolution: {integrity: sha512-nLDxIFRyhDblz3qMuq+SoRZED4+miJ/G+tdDrjkkkRnjAsBexeGpgjLEQ0blJy7rHhR2b93rhQY4SvyWu9v03g==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: false
+
   /minimist-options/4.1.0:
     resolution: {integrity: sha512-Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==}
     engines: {node: '>= 6'}
@@ -9287,13 +9261,6 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /param-case/3.0.4:
-    resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
-    dependencies:
-      dot-case: 3.0.4
-      tslib: 2.3.1
-    dev: false
-
   /parent-module/1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -9363,13 +9330,6 @@ packages:
 
   /path-browserify/1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
-    dev: false
-
-  /path-case/3.0.4:
-    resolution: {integrity: sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==}
-    dependencies:
-      dot-case: 3.0.4
-      tslib: 2.3.1
     dev: false
 
   /path-exists/3.0.0:
@@ -10379,14 +10339,6 @@ packages:
       statuses: 1.5.0
     dev: false
 
-  /sentence-case/3.0.4:
-    resolution: {integrity: sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==}
-    dependencies:
-      no-case: 3.0.4
-      tslib: 2.3.1
-      upper-case-first: 2.0.2
-    dev: false
-
   /serve-static/1.14.2:
     resolution: {integrity: sha512-+TMNA9AFxUEGuC0z2mevogSnn9MXKb4fa7ngeRMJaaGv8vTwnIEkKi+QGvPt33HSnf8pRS+WGM0EbMtCJLKMBQ==}
     engines: {node: '>= 0.8.0'}
@@ -10491,13 +10443,6 @@ packages:
       wcwidth: 1.0.1
       yargs: 15.4.1
     dev: true
-
-  /snake-case/3.0.4:
-    resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
-    dependencies:
-      dot-case: 3.0.4
-      tslib: 2.3.1
-    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
@@ -11065,10 +11010,10 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-morph/13.0.3:
-    resolution: {integrity: sha512-pSOfUMx8Ld/WUreoSzvMFQG5i9uEiWIsBYjpU9+TTASOeUa89j5HykomeqVULm1oqWtBdleI3KEFRLrlA3zGIw==}
+  /ts-morph/14.0.0:
+    resolution: {integrity: sha512-tO8YQ1dP41fw8GVmeQAdNsD8roZi1JMqB7YwZrqU856DvmG5/710e41q2XauzTYrygH9XmMryaFeLo+kdCziyA==}
     dependencies:
-      '@ts-morph/common': 0.12.3
+      '@ts-morph/common': 0.13.0
       code-block-writer: 11.0.0
     dev: false
 
@@ -11103,8 +11048,8 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /tsconfig-paths/3.12.0:
-    resolution: {integrity: sha512-e5adrnOYT6zqVnWqZu7i/BQ3BnhzvGbjEjejFXO20lKIKpwTaupkCPgEfv4GZK1IBciJUEhYs3J3p75FdaTFVg==}
+  /tsconfig-paths/3.13.0:
+    resolution: {integrity: sha512-nWuffZppoaYK0vQ1SQmkSsQzJoHA4s6uzdb2waRpD806x9yfq153AdVsWz4je2qZcW+pENrMQXbGQ3sMCkXuhw==}
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.1
@@ -11197,119 +11142,119 @@ packages:
       yargs: 15.4.1
     dev: true
 
-  /turbo-darwin-64/1.1.4:
-    resolution: {integrity: sha512-X10dAxqCMXnDjyN4K5mSvhol42kfAcJhI9NS7neIMD25kLcULYFe96Qk1XWEBxgCEBAmkf7UrysYSP+dQMPlGw==}
+  /turbo-darwin-64/1.1.5:
+    resolution: {integrity: sha512-qdGMylQ408NmYhzuMmx+25W0iHFyFMRPO4579tDEv+WBiVDfAEYEzjajE4c+CQOLhd1aVEaPdSa+YhngQUgoDQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64/1.1.4:
-    resolution: {integrity: sha512-sl5TiMLNqWKvKpQsh6lg2sUXRTVt5lfRqnStVw/E/5BTm/KIBZTNWHmx0hO8/LwDmXenVtpiW7h7BbWewfPqTQ==}
+  /turbo-darwin-arm64/1.1.5:
+    resolution: {integrity: sha512-mXU324d3vYzxRT9FSSkW9yG2BvFosd0f4DUvqy4qms8wzM6Yv9Aeo4zZTL86rF88UYGUkbiRaPQUeceb/QARVg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-freebsd-64/1.1.4:
-    resolution: {integrity: sha512-EKrAzIyVgmeQf0NpAcxYrhFEiBTrjO163dpiiHxwRiRxTYtcWgY+RJiWVQyIeG0yPx1Z+aLXvmPqf6HvC0T3hg==}
+  /turbo-freebsd-64/1.1.5:
+    resolution: {integrity: sha512-qjjPTnZKOxw2x1Ito3yZAYDcwsCEg/5kYJwbPVvDn1jyXoxr3pUxTHUohroxQ6EmyxQ28qL7QpCVWDoQpDwrOQ==}
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-freebsd-arm64/1.1.4:
-    resolution: {integrity: sha512-Vz3NSbc909eZU1DaS54vL1Z022OCG9wnrK7cB2e2ynMMdeYrIxAWnQeGVrYewQHYhwcCs7/6TgZCfhZKnG2nxQ==}
+  /turbo-freebsd-arm64/1.1.5:
+    resolution: {integrity: sha512-jYW+Th9Y6yEYevaFe7v3lFQoxyrpd8wX5KuuvqLazMRbNxvKgqTDmT7AbCOGJY5ejzqGnMlTGkQr8c3g3B8ndA==}
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-32/1.1.4:
-    resolution: {integrity: sha512-sACZPPv0wDpoTu1qRuOP0CYZS6HY8naySg9fTBP4kcRF5dLC4xPQZA46g8AUMkRFoBsyqA08t2whwV8gvYFoUg==}
+  /turbo-linux-32/1.1.5:
+    resolution: {integrity: sha512-c5I8tdR1jD8L8pJWk+rlO734bpWI1gwGdvNOaA/IGZxzOfDSn4CGoUErnUPgOadT8azi7lT9UPQf/pLfEvjCOw==}
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64/1.1.4:
-    resolution: {integrity: sha512-VTDSlTiF01P50JcyemWhGC1lx736gQMi3q6eLkGrt0t9HTtkl9FpQEypJDyRKZXTL+60ldriIwhivHmWm9cwQA==}
+  /turbo-linux-64/1.1.5:
+    resolution: {integrity: sha512-BZAxLfIkEtQa7u+VPYpdeVVJH6ab4WwXv4oCrUDaZf2BseDUxr57y2ASAWNFsg40T3oXXt4Kcbdc5LibjWQdtQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm/1.1.4:
-    resolution: {integrity: sha512-XDVX6rzRr7AgqQvA4VwPVAHWxxWFI8SgEsNtbXD4sKiEFo9fTWqMvtRJqhx86Z/XHtCJF8VuU3yPS5puItdc9A==}
+  /turbo-linux-arm/1.1.5:
+    resolution: {integrity: sha512-X6J05gQSWTc2c/TCkOQdFLhr35pUjEExY6K8yanYs2QKgd4GvDHmxYaBZ+6f90qcIUHYpe++adDPJcuAUv+8ug==}
     cpu: [arm]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64/1.1.4:
-    resolution: {integrity: sha512-rMSjwzWg9W8J/JwIBtp0+e8O8MP6Z5U4htMgk88zalhSYhAxGIhOCIQT8KsaKoc71Ee/wG1soeprZvqBf/B84Q==}
+  /turbo-linux-arm64/1.1.5:
+    resolution: {integrity: sha512-8/yz5L0B6Jb0pNcvx/08LcPswizqggxQ0zlFEw+Oh9RAC+ZM5+X2YiMyKolvLCpkoRqrlKku0lmXH7mx6DWbig==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-mips64le/1.1.4:
-    resolution: {integrity: sha512-2VK+R9eUQU1xPJ+tGOsALQ6hsc8W7h9ohIumBYYs++SDazwaMQB7lsusXDasf6smEzD02KyUJuj0OvwzJjqq7Q==}
+  /turbo-linux-mips64le/1.1.5:
+    resolution: {integrity: sha512-K26bEFcLDGPkcaW7Eq4CMSxUbJf/x58aE92+0tONhrxXzamaBqTrSxPYlk/T8OoH7HxOvja2ctkpeI/NRAoIyw==}
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-ppc64le/1.1.4:
-    resolution: {integrity: sha512-Ja9eiRxjioO1PV+TxRmTzsNvGGUQDdJnTLsG1YkKldkplecQdUfJRFdWksEZ7dZ+Hv44g4zvskJgUuCYlGckyA==}
+  /turbo-linux-ppc64le/1.1.5:
+    resolution: {integrity: sha512-fr1/5yf8fe1BJiW/6Y9lmV+kxZZC3u3xvSBC5AXDSl9u3aJFZl96CRE9tOJbTZMaOVGxhplKD+EiHbjIxUnTrA==}
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-32/1.1.4:
-    resolution: {integrity: sha512-c8l91hmpsFcmZQJBsDlhLAxfaBl83DXSmDOQoE7YT60vOZZSkfPlNSsHm9tq+4WN54unFfqpNbO7r6z+6R7rfw==}
+  /turbo-windows-32/1.1.5:
+    resolution: {integrity: sha512-K9LdIgQXJ7jL0aLJS0l2asJAH/vYBFP7qFzODiAcJ1EeKBjYqAVnIxFQrUN07lzNDtL9WK/aN5q0bJCDnhwTQw==}
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64/1.1.4:
-    resolution: {integrity: sha512-DMitFYd5eIhZ2CyPUeds3JXDB/onXBdA2DEj9cxVXY7q2ZBE4rpoV0Ft/mh15LsQZhwap9ipgddbCn16OGFvzw==}
+  /turbo-windows-64/1.1.5:
+    resolution: {integrity: sha512-c2Jkmw8yGZVz4opzEvB5HAf9XkA8CZBnorie46s44ec0FaNbcP9SCuUNvgAHxqDIHTGWC4A5PoPn0owkD3ss6A==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo/1.1.4:
-    resolution: {integrity: sha512-kz08AV61hJeY9xuL4yQ27G2qks5LMAdvbd36GpcKvrh4Za+m0t+r2ijMjDvATp8uj4i6IlSV0t/G0/OMwkm6HA==}
+  /turbo/1.1.5:
+    resolution: {integrity: sha512-jXW8G4lr01/E/jS/66LYpEjwWFQAksC8TxR8gi3VGea7OeNj28l8zmXoY3IgT5H22MBnhmtOKV/GhsbPjI2Jrg==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.1.4
-      turbo-darwin-arm64: 1.1.4
-      turbo-freebsd-64: 1.1.4
-      turbo-freebsd-arm64: 1.1.4
-      turbo-linux-32: 1.1.4
-      turbo-linux-64: 1.1.4
-      turbo-linux-arm: 1.1.4
-      turbo-linux-arm64: 1.1.4
-      turbo-linux-mips64le: 1.1.4
-      turbo-linux-ppc64le: 1.1.4
-      turbo-windows-32: 1.1.4
-      turbo-windows-64: 1.1.4
+      turbo-darwin-64: 1.1.5
+      turbo-darwin-arm64: 1.1.5
+      turbo-freebsd-64: 1.1.5
+      turbo-freebsd-arm64: 1.1.5
+      turbo-linux-32: 1.1.5
+      turbo-linux-64: 1.1.5
+      turbo-linux-arm: 1.1.5
+      turbo-linux-arm64: 1.1.5
+      turbo-linux-mips64le: 1.1.5
+      turbo-linux-ppc64le: 1.1.5
+      turbo-windows-32: 1.1.5
+      turbo-windows-64: 1.1.5
     dev: true
 
   /type-check/0.3.2:
@@ -11574,18 +11519,6 @@ packages:
       xdg-basedir: 4.0.0
     dev: true
 
-  /upper-case-first/2.0.2:
-    resolution: {integrity: sha512-514ppYHBaKwfJRK/pNC6c/OxfGa0obSnAl106u97Ed0I625Nin96KAjttZF6ZL3e1XLtphxnqrOi9iWgm+u+bg==}
-    dependencies:
-      tslib: 2.3.1
-    dev: false
-
-  /upper-case/2.0.2:
-    resolution: {integrity: sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==}
-    dependencies:
-      tslib: 2.3.1
-    dev: false
-
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
@@ -11740,7 +11673,7 @@ packages:
       debug: 4.3.3
       globrex: 0.1.2
       recrawl-sync: 2.2.1
-      tsconfig-paths: 3.12.0
+      tsconfig-paths: 3.13.0
       vite: 2.8.6
     transitivePeerDependencies:
       - supports-color

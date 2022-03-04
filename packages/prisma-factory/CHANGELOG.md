@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.4
+
+### Patch Changes
+
+- Add support for passing callbacks to `create` method attributes on factories
+
 ## 0.1.3
 
 ### Patch Changes

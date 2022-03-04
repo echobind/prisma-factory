@@ -1,6 +1,6 @@
 {
   "name": "prisma-factory",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Generates factories for your prisma models",
   "repository": {
     "type": "git",
@@ -26,21 +26,21 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs"
     },
     "./*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.mjs",
-      "require": "./dist/*.js"
+      "require": "./dist/*.cjs"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": "./bin/generator.js",
   "scripts": {
-    "dev": "tsup src/index.ts src/generator.ts --format cjs,esm --watch --onSuccess \"pnpm prisma:generate\"",
-    "build": "tsup src/index.ts src/generator.ts --format cjs,esm --dts-resolve",
+    "dev": "unbuild --stub",
+    "build": "unbuild",
     "format": "prettier --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
     "clean": "rimraf .turbo node_modules dist prisma/client prisma/generated",
     "migrate:dev": "prisma migrate dev",
@@ -61,8 +61,8 @@
   "dependencies": {
     "@prisma/generator-helper": "^3.10.0",
     "@prisma/sdk": "^3.10.0",
-    "change-case": "^4.1.2",
-    "ts-morph": "^13.0.3"
+    "camel-case": "^4.1.2",
+    "ts-morph": "^14.0.0"
   },
   "devDependencies": {
     "@prisma-factory/config": "workspace:^",
@@ -80,7 +80,7 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.3",
     "ts-node": "^10.6.0",
-    "tsconfig-paths": "^3.12.0",
+    "tsconfig-paths": "^3.13.0",
     "tslib": "^2.3.1",
     "tsup": "^5.11.13",
     "typescript": "^4.6.2",
