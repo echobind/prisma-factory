@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 'use strict';
-require('../dist/generator.cjs');
+require('../dist/generator.js');

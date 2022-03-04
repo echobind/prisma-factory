@@ -22,12 +22,10 @@ export const getPrismaClient = async (client: string) => {
 /**
  * Builds up a Prisma include object based on the presence of connect/create keys
  */
-export function buildPrismaInclude(attrs: Record<string, any>) {
+export function buildPrismaIncludeFromAttrs(attrs: Record<string, any>) {
   const include = Object.keys(attrs).reduce((prev, curr) => {
     const value = attrs[curr];
-    const isObject = typeof value === 'object';
-
-    // assume it is a relation if connect or create is present
+    const isObject = typeof value === 'object' && value !== null;
     const isRelation = isObject && Object.keys(value).find((v) => v.match(/connect|create/));
 
     if (isRelation) {

@@ -1,5 +1,5 @@
 import { camelCase } from 'camel-case';
-import { getPrismaClient, buildPrismaInclude } from './utils/prisma';
+import { getPrismaClient, buildPrismaIncludeFromAttrs } from './utils/prisma';
 
 export interface CreateFactoryOptions<CreateInputType> {
   client?: string;
@@ -24,9 +24,16 @@ export function createFactory<CreateInputType, ReturnModelType>(
 ): CreateFactoryReturn<CreateInputType, ReturnModelType> {
   const FactoryFunctions = {
     build: (attrs: Partial<CreateInputType> = {}) => {
+      const data = Object.fromEntries(
+        Object.entries(attrs).map(([key, value]) => [
+          key,
+          typeof value === 'function' ? value() : value,
+        ])
+      ) as CreateInputType;
+
       return {
         ...defaultAttrs,
-        ...attrs,
+        ...data,
       } as CreateInputType;
     },
 
@@ -43,7 +50,7 @@ export function createFactory<CreateInputType, ReturnModelType>(
       let data = FactoryFunctions.build(attrs);
       const prismaOptions: Record<string, any> = {};
 
-      const includes = buildPrismaInclude(attrs);
+      const includes = buildPrismaIncludeFromAttrs(attrs);
       if (includes) prismaOptions.include = includes;
 
       if (options.beforeCreate) {
@@ -51,13 +58,6 @@ export function createFactory<CreateInputType, ReturnModelType>(
       }
 
       const prismaModel = camelCase(modelName);
-
-      data = Object.fromEntries(
-        Object.entries(data).map(([key, value]) => [
-          key,
-          typeof value === 'function' ? value() : value,
-        ])
-      ) as CreateInputType;
 
       const result: Promise<ReturnModelType> = await prisma[prismaModel].create({
         data,

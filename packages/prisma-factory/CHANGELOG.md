@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.5
+
+### Patch Changes
+
+- Move execution logic of input attributes to build method instead of create.
+
 ## 0.1.4
 
 ### Patch Changes

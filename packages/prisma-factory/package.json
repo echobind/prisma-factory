@@ -1,6 +1,6 @@
 {
   "name": "prisma-factory",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Generates factories for your prisma models",
   "repository": {
     "type": "git",
@@ -26,21 +26,21 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     },
     "./*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.mjs",
-      "require": "./dist/*.cjs"
+      "require": "./dist/*.js"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": "./bin/generator.js",
   "scripts": {
-    "dev": "unbuild --stub",
-    "build": "unbuild",
+    "dev": "tsup src/index.ts src/generator.ts --format cjs,esm --watch --onSuccess \"pnpm prisma:generate\"",
+    "build": "tsup src/index.ts src/generator.ts --format cjs,esm --dts-resolve",
     "format": "prettier --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
     "clean": "rimraf .turbo node_modules dist prisma/client prisma/generated",
     "migrate:dev": "prisma migrate dev",
@@ -73,7 +73,6 @@
     "eslint": "^8.10.0",
     "execa": "^6.1.0",
     "jest": "^27.5.1",
-    "jiti": "^1.13.0",
     "prettier-plugin-prisma": "^3.10.0",
     "prisma": "^3.10.0",
     "release-it": "^14.12.5",
@@ -84,7 +83,6 @@
     "tslib": "^2.3.1",
     "tsup": "^5.11.13",
     "typescript": "^4.6.2",
-    "unbuild": "^0.6.9",
     "vitest": "^0.5.9"
   }
 }

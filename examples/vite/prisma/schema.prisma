@@ -19,6 +19,7 @@ generator factories {
 
 model TeamMember {
   id          String   @id @default(cuid())
+  teamId      String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   name        String   @unique
@@ -27,4 +28,13 @@ model TeamMember {
   image       String
   twitter     String?
   linkedin    String?
+  team        Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+}
+
+model Team {
+  id        String       @id @default(cuid())
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  name      String       @unique
+  members   TeamMember[]
 }

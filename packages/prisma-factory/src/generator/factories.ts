@@ -1,4 +1,5 @@
 import { DMMF } from '@prisma/client/runtime';
+import { getSchemaDir } from '@prisma/sdk';
 import { SourceFile } from 'ts-morph';
 
 type GenerateFactoriesOptions = {
