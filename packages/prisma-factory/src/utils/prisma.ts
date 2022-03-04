@@ -12,11 +12,7 @@ declare global {
 export const getPrismaClient = async (client: string) => {
   const { PrismaClient } = await import(client);
 
-  const prisma =
-    global.prisma ||
-    new PrismaClient({
-      log: ['query'],
-    });
+  const prisma = global.prisma || new PrismaClient();
 
   if (process.env.NODE_ENV !== 'production') global.prisma = prisma;
 
