@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
-    "@emotion/react": "^11.8.1",
+    "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
-    "@prisma/client": "^3.10.0",
+    "@prisma/client": "^3.11.0",
     "@remix-run/react": "^1.2.3",
     "@remix-run/serve": "^1.2.3",
     "framer-motion": "^6.2.8",
@@ -32,18 +32,18 @@
     "remix": "^1.2.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@faker-js/faker": "^6.0.0-alpha.7",
+    "@babel/core": "^7.17.7",
+    "@faker-js/faker": "^6.0.0-beta.0",
     "@prisma-factory/test-utils": "workspace:^",
     "@remix-run/dev": "^1.2.3",
-    "@types/react": "^17.0.39",
+    "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
     "cuid": "^2.1.8",
     "prettier-plugin-prisma": "^3.10.0",
-    "prisma": "^3.10.0",
+    "prisma": "^3.11.0",
     "prisma-factory": "workspace:^",
-    "ts-node": "^10.6.0",
-    "tsconfig-paths": "^3.13.0",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^3.14.0",
     "typescript": "^4.6.2"
   },
   "engines": {
@@ -51,7 +51,7 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@babel/core": "^7.17.5"
+    "@babel/core": "^7.17.7"
   },
   "version": null
 }

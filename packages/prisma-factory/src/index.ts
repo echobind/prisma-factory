@@ -1,2 +1,2 @@
-export * from './utils/types';
+export * from './lib/types';
 export * from './createFactory';

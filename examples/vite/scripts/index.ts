@@ -1,38 +1,19 @@
-import { faker } from '@faker-js/faker';
-import { TeamMemberFactory, TeamFactory } from '../prisma/factories/team';
+import { PrismaClient } from 'prisma/client';
+import { TeamFactory } from '../prisma/factories/team';
 
 async function main() {
-  const createTeamMembers = () => {
-    const members = new Array(10).fill(() =>
-      TeamMemberFactory.build({
-        id: faker.datatype.uuid,
-        name: faker.name.findName,
-        createdAt: faker.date.past,
-        updatedAt: faker.date.recent,
-        role: faker.name.jobTitle,
-        description: faker.lorem.sentence,
-        image: faker.image.avatar,
-        twitter: '#',
-        linkedin: '#',
-      })
-    );
+  const prisma = new PrismaClient();
 
-    return members.map((member) => member());
-  };
+  for (let i = 0; i < 10; i++) {
+    const created = await TeamFactory().create();
 
-  const data = await TeamFactory.create({
-    id: faker.datatype.uuid,
-    name: faker.company.companyName,
-    createdAt: faker.date.past,
-    updatedAt: faker.date.recent,
-    members: {
-      createMany: {
-        data: createTeamMembers(),
-      },
-    },
-  });
+    const data = await prisma.team.findUnique({
+      where: { id: created.id },
+      include: { members: true },
+    });
 
-  console.log(data);
+    console.dir(data, { depth: null });
+  }
 }
 
 main()

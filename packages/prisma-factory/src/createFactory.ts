@@ -1,14 +1,17 @@
 import { camelCase } from 'camel-case';
-import { getPrismaClient, buildPrismaIncludeFromAttrs } from './utils/prisma';
+import type { CreateFactoryReturn, CreateFactoryOptions, CreateFactoryHooks } from 'src/lib/types';
+import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
 
-export interface CreateFactoryOptions<CreateInputType> {
-  client?: string;
-  beforeCreate?: (attrs: CreateInputType) => typeof attrs;
-}
-
-export interface CreateFactoryReturn<CreateInputType, ReturnModelType> {
-  build: (attrs?: Partial<CreateInputType>) => CreateInputType;
-  create: (attrs?: Partial<CreateInputType>) => Promise<ReturnModelType>;
+/**
+ * Map callaback attributes to prisma input attributes
+ */
+export function mapCallbackAttrs<CreateInputType>(attrs: CreateInputType) {
+  return Object.fromEntries(
+    Object.entries(attrs).map(([key, value]) => [
+      key,
+      typeof value === 'function' ? value() : value,
+    ])
+  ) as CreateInputType;
 }
 
 /**
@@ -20,20 +23,14 @@ export interface CreateFactoryReturn<CreateInputType, ReturnModelType> {
 export function createFactory<CreateInputType, ReturnModelType>(
   modelName: string,
   defaultAttrs = {},
-  options: CreateFactoryOptions<CreateInputType> = {}
+  options: CreateFactoryOptions = {},
+  hooks: CreateFactoryHooks<CreateInputType, ReturnModelType> = {}
 ): CreateFactoryReturn<CreateInputType, ReturnModelType> {
   const FactoryFunctions = {
     build: (attrs: Partial<CreateInputType> = {}) => {
-      const data = Object.fromEntries(
-        Object.entries(attrs).map(([key, value]) => [
-          key,
-          typeof value === 'function' ? value() : value,
-        ])
-      ) as CreateInputType;
-
       return {
-        ...defaultAttrs,
-        ...data,
+        ...mapCallbackAttrs(defaultAttrs),
+        ...mapCallbackAttrs(attrs),
       } as CreateInputType;
     },
 
@@ -53,16 +50,20 @@ export function createFactory<CreateInputType, ReturnModelType>(
       const includes = buildPrismaIncludeFromAttrs(attrs);
       if (includes) prismaOptions.include = includes;
 
-      if (options.beforeCreate) {
-        data = options.beforeCreate(data);
+      if (hooks.beforeCreate) {
+        data = hooks.beforeCreate(data);
       }
 
       const prismaModel = camelCase(modelName);
 
-      const result: Promise<ReturnModelType> = await prisma[prismaModel].create({
+      let result: ReturnModelType = await prisma[prismaModel].create({
         data,
         ...prismaOptions,
       });
+
+      if (hooks.afterCreate) {
+        result = hooks.afterCreate(result);
+      }
 
       return result;
     },
