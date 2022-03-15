@@ -25,13 +25,16 @@ const createTeamMembers = () => {
 };
 
 export const TeamFactory = () =>
-  createTeamFactory({
-    name: faker.company.companyName,
-    createdAt: faker.date.past,
-    updatedAt: faker.date.recent,
-    members: {
-      createMany: {
-        data: createTeamMembers(),
+  createTeamFactory(
+    {
+      name: faker.company.companyName,
+      createdAt: faker.date.past,
+      updatedAt: faker.date.recent,
+      members: {
+        createMany: {
+          data: createTeamMembers(),
+        },
       },
     },
-  });
+    {}
+  );

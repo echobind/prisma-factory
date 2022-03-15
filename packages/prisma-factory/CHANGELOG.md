@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.8
+
+### Patch Changes
+
+- Patch missing generics in new create hook params
+
 ## 0.1.7
 
 ### Patch Changes

@@ -7,7 +7,7 @@ export interface CreateFactoryOptions {
 }
 
 export interface CreateFactoryHooks<CreateInputType, ReturnModelType> {
-  beforeCreate?: (attrs: CreateInputType) => typeof attrs;
+  beforeCreate?: (attrs: CreateInputType) => CreateInputType;
   afterCreate?: (data: ReturnModelType) => ReturnModelType;
 }
 

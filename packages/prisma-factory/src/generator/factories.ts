@@ -48,13 +48,13 @@ function addModelFactoryFunction(
   newFunction.insertParameters(2, [
     {
       name: 'hooks',
-      type: `CreateFactoryHooks`,
+      type: `CreateFactoryHooks<Prisma.${model.name}CreateInput, ${model.name}>`,
       hasQuestionToken: true,
     },
   ]);
 
   newFunction.setBodyText(
-    `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs, options, hooks); `
+    `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs, { ...options, client: '${options.client}' }, hooks); `
   );
 
   newFunction.setReturnType(
@@ -89,7 +89,7 @@ function addImports(
 
     {
       moduleSpecifier: 'prisma-factory',
-      namedImports: ['createFactory', 'CreateFactoryReturn'],
+      namedImports: ['createFactory'],
     },
     {
       moduleSpecifier: options.client,
