@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.7
+
+### Patch Changes
+
+- [`9d12f63`](https://github.com/echobind/prisma-factory/commit/9d12f63c1082e57335633f344d705230675bd03c) Thanks [@tundera](https://github.com/tundera)! - Update API of `createFactory` to allow before/after hooks to be passed in.
+
 ## 0.1.5
 
 ### Patch Changes
