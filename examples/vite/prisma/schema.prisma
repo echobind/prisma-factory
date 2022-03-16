@@ -17,9 +17,10 @@ generator factories {
   output   = "./generated"
 }
 
-model TeamMember {
+model Person {
   id          String   @id @default(cuid())
   teamId      String
+  skillId     String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   name        String   @unique
@@ -29,12 +30,22 @@ model TeamMember {
   twitter     String?
   linkedin    String?
   team        Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  expertise   Skill    @relation(fields: [skillId], references: [id])
 }
 
 model Team {
-  id        String       @id @default(cuid())
-  createdAt DateTime     @default(now())
-  updatedAt DateTime     @updatedAt
-  name      String       @unique
-  members   TeamMember[]
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String   @unique
+  members   Person[]
+}
+
+model Skill {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String   @unique
+  description String
+  experts     Person[]
 }

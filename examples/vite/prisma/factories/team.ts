@@ -1,28 +1,27 @@
 import { faker } from '@faker-js/faker';
-import { createTeamMemberFactory, createTeamFactory } from '../generated';
+import { createPersonFactory, createTeamFactory, createSkillFactory } from '../generated';
 
-export const TeamMemberFactory = () =>
-  createTeamMemberFactory({
-    name: faker.name.findName,
-    createdAt: faker.date.past,
-    updatedAt: faker.date.recent,
-    role: faker.name.jobTitle,
-    description: faker.lorem.sentence,
-    image: faker.image.avatar,
-    twitter: '#',
-    linkedin: '#',
-  });
+export const SkillFactory = createSkillFactory({
+  name: faker.name.jobArea,
+  createdAt: faker.date.past,
+  updatedAt: faker.date.past,
+  description: faker.name.jobDescriptor,
+});
 
-const createTeamMembers = () => {
-  return new Array(10)
-    .fill(() =>
-      TeamMemberFactory().build({
-        role: () => String('amazing team member').toUpperCase(),
-        updatedAt: () => new Date(),
-      })
-    )
-    .map((member) => member());
-};
+export const TeamMemberFactory = createPersonFactory({
+  name: faker.name.findName,
+  createdAt: faker.date.past,
+  updatedAt: faker.date.recent,
+  role: faker.name.jobTitle,
+  description: faker.lorem.sentence,
+  image: faker.image.avatar,
+  twitter: '#',
+  linkedin: '#',
+  expertise: {
+    // TODO: Fix these typings
+    create: SkillFactory.build() as any,
+  },
+});
 
 export const TeamFactory = () =>
   createTeamFactory(
@@ -32,7 +31,7 @@ export const TeamFactory = () =>
       updatedAt: faker.date.recent,
       members: {
         createMany: {
-          data: createTeamMembers(),
+          data: new Array(10).fill(() => TeamMemberFactory.build()),
         },
       },
     },

@@ -5,12 +5,15 @@ import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
 /**
  * Map callaback attributes to prisma input attributes
  */
-export function mapCallbackAttrs<CreateInputType>(attrs: CreateInputType) {
+export function mapCallbackAttrs<CreateInputType>(attrs: CreateInputType): CreateInputType {
   return Object.fromEntries(
-    Object.entries(attrs).map(([key, value]) => [
-      key,
-      typeof value === 'function' ? value() : value,
-    ])
+    Object.entries(attrs).map(([key, value]) => {
+      return typeof value === 'object'
+        ? mapCallbackAttrs(value)
+        : typeof value === 'function'
+        ? [key, value()]
+        : [key, value];
+    })
   ) as CreateInputType;
 }
 

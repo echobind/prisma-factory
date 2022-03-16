@@ -1,14 +1,20 @@
 #!/usr/bin/env node
 
 import { PrismaClient } from 'prisma/client';
-import { TeamFactory } from 'prisma/factories/team';
+import { TeamFactory, TeamMemberFactory } from 'prisma/factories/team';
 
 const prisma = new PrismaClient();
 
 async function main() {
   try {
     for (let i = 0; i < 10; i++) {
-      await TeamFactory().create();
+      await TeamFactory().create({
+        members: {
+          createMany: {
+            data: new Array(10).fill(() => TeamMemberFactory.build()),
+          },
+        },
+      });
     }
   } catch (error) {
     console.warn('Please define your seed data.');
