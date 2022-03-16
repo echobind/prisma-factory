@@ -1,5 +1,17 @@
 # prisma-factory
 
+## 0.1.10
+
+### Patch Changes
+
+- Undo erroneous placement of generated types in package dist.
+
+## 0.1.9
+
+### Patch Changes
+
+- Relocate generated output of `prisma-factory` to its dist directory.
+
 ## 0.1.8
 
 ### Patch Changes
