@@ -7,14 +7,14 @@ importers:
       '@changesets/changelog-github': ^0.4.3
       '@changesets/cli': ^2.21.1
       '@types/node': ^17.0.21
-      prettier: ^2.5.1
+      prettier: ^2.6.0
       rimraf: ^3.0.2
       turbo: ^1.1.6
     devDependencies:
       '@changesets/changelog-github': 0.4.3
       '@changesets/cli': 2.21.1
       '@types/node': 17.0.21
-      prettier: 2.5.1
+      prettier: 2.6.0
       rimraf: 3.0.2
       turbo: 1.1.6
 
@@ -24,7 +24,7 @@ importers:
       '@chakra-ui/react': ^1.8.6
       '@emotion/react': ^11.8.2
       '@emotion/styled': ^11.8.1
-      '@faker-js/faker': ^6.0.0-beta.0
+      '@faker-js/faker': ^6.0.0
       '@prisma-factory/test-utils': workspace:^
       '@prisma/client': ^3.11.0
       '@remix-run/dev': ^1.2.3
@@ -58,13 +58,13 @@ importers:
       remix: 1.2.3
     devDependencies:
       '@babel/core': 7.17.7
-      '@faker-js/faker': 6.0.0-beta.0
+      '@faker-js/faker': 6.0.0
       '@prisma-factory/test-utils': link:../../internal/test-utils
       '@remix-run/dev': 1.2.3_react-dom@17.0.2+react@17.0.2
       '@types/react': 17.0.40
       '@types/react-dom': 17.0.13
       cuid: 2.1.8
-      prettier-plugin-prisma: 3.10.0_prettier@2.5.1
+      prettier-plugin-prisma: 3.10.0_prettier@2.6.0
       prisma: 3.11.0
       prisma-factory: link:../../packages/prisma-factory
       ts-node: 10.7.0_e79e62fe450383fd2d418267dc75e645
@@ -77,7 +77,7 @@ importers:
       '@chakra-ui/react': ^1.8.6
       '@emotion/react': ^11.8.2
       '@emotion/styled': ^11.8.1
-      '@faker-js/faker': ^6.0.0-beta.0
+      '@faker-js/faker': ^6.0.0
       '@prisma-factory/test-utils': workspace:^
       '@prisma/client': ^3.11.0
       '@testing-library/dom': ^8.11.3
@@ -87,7 +87,7 @@ importers:
       '@types/react': ^17.0.40
       '@types/react-dom': ^17.0.13
       '@vitejs/plugin-react': ^1.2.0
-      '@vitest/ui': ^0.6.1
+      '@vitest/ui': ^0.6.3
       cuid: ^2.1.8
       framer-motion: ^6.2.8
       msw: ^0.39.2
@@ -102,7 +102,7 @@ importers:
       typescript: ^4.6.2
       vite: ^2.8.6
       vite-tsconfig-paths: ^3.4.1
-      vitest: ^0.6.1
+      vitest: ^0.6.3
     dependencies:
       '@chakra-ui/react': 1.8.6_b5697210a848410573c38bcd7b4427f0
       '@emotion/react': 11.8.2_47ea947e2a228aa5b9e98bcc4bbde992
@@ -114,7 +114,7 @@ importers:
       react-icons: 4.3.1_react@17.0.2
     devDependencies:
       '@babel/core': 7.17.7
-      '@faker-js/faker': 6.0.0-beta.0
+      '@faker-js/faker': 6.0.0
       '@prisma-factory/test-utils': link:../../internal/test-utils
       '@testing-library/dom': 8.11.3
       '@testing-library/jest-dom': 5.16.2
@@ -123,10 +123,10 @@ importers:
       '@types/react': 17.0.40
       '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
-      '@vitest/ui': 0.6.1
+      '@vitest/ui': 0.6.3
       cuid: 2.1.8
       msw: 0.39.2
-      prettier-plugin-prisma: 3.10.0_prettier@2.5.1
+      prettier-plugin-prisma: 3.10.0_prettier@2.6.0
       prisma: 3.11.0
       prisma-factory: link:../../packages/prisma-factory
       ts-node: 10.7.0_e79e62fe450383fd2d418267dc75e645
@@ -134,7 +134,7 @@ importers:
       typescript: 4.6.2
       vite: 2.8.6
       vite-tsconfig-paths: 3.4.1_vite@2.8.6
-      vitest: 0.6.1_@vitest+ui@0.6.1
+      vitest: 0.6.3_@vitest+ui@0.6.3
 
   internal/test-utils:
     specifiers:
@@ -158,7 +158,7 @@ importers:
       ts-jest: ^27.1.3
       tsup: ^5.12.1
       typescript: ^4.6.2
-      vitest: ^0.6.1
+      vitest: ^0.6.3
     dependencies:
       '@testing-library/jest-dom': 5.16.2
       '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
@@ -181,7 +181,7 @@ importers:
       ts-jest: 27.1.3_3a32cdd88f0ca195c228fed9b8c7c9f8
       tsup: 5.12.1_typescript@4.6.2
       typescript: 4.6.2
-      vitest: 0.6.1
+      vitest: 0.6.3
 
   packages/config:
     specifiers:
@@ -226,7 +226,7 @@ importers:
       tslib: ^2.3.1
       tsup: ^5.12.1
       typescript: ^4.6.2
-      vitest: ^0.6.1
+      vitest: ^0.6.3
     dependencies:
       '@prisma/generator-helper': 3.11.0
       '@prisma/sdk': 3.11.0
@@ -241,7 +241,7 @@ importers:
       eslint: 8.11.0
       execa: 6.1.0
       jest: 27.5.1_ts-node@10.7.0
-      prettier-plugin-prisma: 3.10.0_prettier@2.5.1
+      prettier-plugin-prisma: 3.10.0_prettier@2.6.0
       prisma: 3.11.0
       release-it: 14.12.5
       rimraf: 3.0.2
@@ -251,7 +251,7 @@ importers:
       tslib: 2.3.1
       tsup: 5.12.1_ts-node@10.7.0+typescript@4.6.2
       typescript: 4.6.2
-      vitest: 0.6.1
+      vitest: 0.6.3
 
   packages/tsconfig:
     specifiers: {}
@@ -1928,8 +1928,8 @@ packages:
       - supports-color
     dev: true
 
-  /@faker-js/faker/6.0.0-beta.0:
-    resolution: {integrity: sha512-7QdsX5ZqUEz87twuoKEJe7NHn6OHQsVYQpJcK0disnR0XuVb9FEgQUcsViard9OTNN/fG/nZT63V35vieOwZ4Q==}
+  /@faker-js/faker/6.0.0:
+    resolution: {integrity: sha512-10zLCKhp3YEmBuko71ivcMoIZcCLXgQVck6aNswX+AWwaek/L8S3yz9i8m3tHigRkcF6F2vI+qtdtyySHK+bGA==}
     engines: {node: '>=14.0.0', npm: '>=7.0.0'}
     dev: true
 
@@ -3442,8 +3442,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vitest/ui/0.6.1:
-    resolution: {integrity: sha512-eBquWSP0C1InsHY34PktjL9cKCKO28q4HNhJEwa8rrPaXGYL3/abQuqJRqNH+ApUAUQd/q2RDAfzBdNoKWvAKg==}
+  /@vitest/ui/0.6.3:
+    resolution: {integrity: sha512-jn1yaTkHw5IBI2hmiKiAjAOAa3U+gIC3r5XUXQap4h40xnk0eTaf/V7U5MD7SgtwW+On3uzjF1MA3rN444IUGA==}
     dependencies:
       sirv: 2.0.2
     dev: true
@@ -9154,14 +9154,14 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /prettier-plugin-prisma/3.10.0_prettier@2.5.1:
+  /prettier-plugin-prisma/3.10.0_prettier@2.6.0:
     resolution: {integrity: sha512-NIbpqcwyB70fAWqFlOmmhaa9DhGAnZ8uWVyc0cS7EaOR7TH5yjnw6WV5HPjWdVmh6m84W8dwMRzGzLTW/S4Kmw==}
     engines: {node: '>=12', npm: '>=7'}
     peerDependencies:
       prettier: '>=2'
     dependencies:
       '@prisma/prisma-fmt-wasm': 3.10.0-50.73e60b76d394f8d37d8ebd1f8918c79029f0db86
-      prettier: 2.5.1
+      prettier: 2.6.0
     dev: true
 
   /prettier/1.19.1:
@@ -9170,8 +9170,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier/2.5.1:
-    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+  /prettier/2.6.0:
+    resolution: {integrity: sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -11295,8 +11295,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.6.1:
-    resolution: {integrity: sha512-rgHgTO3xHCrbgmqYdUz4ViO0g2ekHeOfV60J6+1c6Ypzk1EqCE2sN8IpF4TDGs6BOvWIsVd/ob5c6U4Ozzu92g==}
+  /vitest/0.6.3:
+    resolution: {integrity: sha512-0x5UeYQ5Mqniurxv9KT0+FI4IszLBbNBiBPSXSdyQAEodeq400Q00YB0f1qNbf7YsxyLqFJvGpoOTKJWUYm6mQ==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
@@ -11327,8 +11327,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.6.1_@vitest+ui@0.6.1:
-    resolution: {integrity: sha512-rgHgTO3xHCrbgmqYdUz4ViO0g2ekHeOfV60J6+1c6Ypzk1EqCE2sN8IpF4TDGs6BOvWIsVd/ob5c6U4Ozzu92g==}
+  /vitest/0.6.3_@vitest+ui@0.6.3:
+    resolution: {integrity: sha512-0x5UeYQ5Mqniurxv9KT0+FI4IszLBbNBiBPSXSdyQAEodeq400Q00YB0f1qNbf7YsxyLqFJvGpoOTKJWUYm6mQ==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
@@ -11348,7 +11348,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.0
       '@types/chai-subset': 1.3.3
-      '@vitest/ui': 0.6.1
+      '@vitest/ui': 0.6.3
       chai: 4.3.6
       local-pkg: 0.4.1
       tinypool: 0.1.2

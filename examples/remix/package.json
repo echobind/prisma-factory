@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
-    "@faker-js/faker": "^6.0.0-beta.0",
+    "@faker-js/faker": "^6.0.0",
     "@prisma-factory/test-utils": "workspace:^",
     "@remix-run/dev": "^1.2.3",
     "@types/react": "^17.0.40",
