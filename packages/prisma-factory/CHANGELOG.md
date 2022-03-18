@@ -1,5 +1,11 @@
 # prisma-factory
 
+## 0.1.11
+
+### Patch Changes
+
+- Simplify build and create logic by removing deep callbacks.
+
 ## 0.1.10
 
 ### Patch Changes

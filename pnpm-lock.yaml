@@ -84,11 +84,14 @@ importers:
       '@testing-library/jest-dom': ^5.16.2
       '@testing-library/react': ^12.1.4
       '@testing-library/user-event': ^13.5.0
+      '@types/chance': ^1.1.3
       '@types/react': ^17.0.40
       '@types/react-dom': ^17.0.13
       '@vitejs/plugin-react': ^1.2.0
       '@vitest/ui': ^0.6.3
+      chance: ^1.1.8
       cuid: ^2.1.8
+      esno: ^0.14.1
       framer-motion: ^6.2.8
       msw: ^0.39.2
       prettier-plugin-prisma: ^3.10.0
@@ -120,11 +123,14 @@ importers:
       '@testing-library/jest-dom': 5.16.2
       '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
       '@testing-library/user-event': 13.5.0_@testing-library+dom@8.11.3
+      '@types/chance': 1.1.3
       '@types/react': 17.0.40
       '@types/react-dom': 17.0.13
       '@vitejs/plugin-react': 1.2.0
       '@vitest/ui': 0.6.3
+      chance: 1.1.8
       cuid: 2.1.8
+      esno: 0.14.1
       msw: 0.39.2
       prettier-plugin-prisma: 3.10.0_prettier@2.6.0
       prisma: 3.11.0
@@ -830,7 +836,7 @@ packages:
       '@emotion/react': '>=10.0.35'
       react: '>=16.8.6'
     dependencies:
-      '@emotion/react': 11.8.2_@babel+core@7.17.7+react@17.0.2
+      '@emotion/react': 11.8.2_47ea947e2a228aa5b9e98bcc4bbde992
       react: 17.0.2
 
   /@chakra-ui/descendant/2.1.3_react@17.0.2:
@@ -1125,8 +1131,8 @@ packages:
       '@chakra-ui/react-env': 1.1.6_react@17.0.2
       '@chakra-ui/system': 1.11.2_dc240608ee0d50d8faddd7dd724375c2
       '@chakra-ui/utils': 1.10.4
-      '@emotion/react': 11.8.2_@babel+core@7.17.7+react@17.0.2
-      '@emotion/styled': 11.8.1_65044f2252c11b4f34fdce258430b49d
+      '@emotion/react': 11.8.2_47ea947e2a228aa5b9e98bcc4bbde992
+      '@emotion/styled': 11.8.1_014d3fd47caecfb5ae8372631ae4f839
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
 
@@ -1314,8 +1320,8 @@ packages:
       '@chakra-ui/system': 1.11.2_dc240608ee0d50d8faddd7dd724375c2
       '@chakra-ui/theme': 1.14.0_@chakra-ui+system@1.11.2
       '@chakra-ui/utils': 1.10.4
-      '@emotion/react': 11.8.2_@babel+core@7.17.7+react@17.0.2
-      '@emotion/styled': 11.8.1_65044f2252c11b4f34fdce258430b49d
+      '@emotion/react': 11.8.2_47ea947e2a228aa5b9e98bcc4bbde992
+      '@emotion/styled': 11.8.1_014d3fd47caecfb5ae8372631ae4f839
       react: 17.0.2
 
   /@chakra-ui/slider/1.5.9_cf1afb73b983ccab5207fbc7b13f7809:
@@ -1383,8 +1389,8 @@ packages:
       '@chakra-ui/react-utils': 1.2.3_react@17.0.2
       '@chakra-ui/styled-system': 1.18.1
       '@chakra-ui/utils': 1.10.4
-      '@emotion/react': 11.8.2_@babel+core@7.17.7+react@17.0.2
-      '@emotion/styled': 11.8.1_65044f2252c11b4f34fdce258430b49d
+      '@emotion/react': 11.8.2_47ea947e2a228aa5b9e98bcc4bbde992
+      '@emotion/styled': 11.8.1_014d3fd47caecfb5ae8372631ae4f839
       react: 17.0.2
       react-fast-compare: 3.2.0
 
@@ -1438,9 +1444,6 @@ packages:
     resolution: {integrity: sha512-Wxz3XSJhPCU6OwCHEyH44EegEDQHwvlsx+KDkUDGevOjUU88YuNqOVkKtgTpgMLNQcsrYZ93oPWZUJqqCVNRew==}
     peerDependencies:
       '@chakra-ui/system': '>=1.0.0'
-    peerDependenciesMeta:
-      '@chakra-ui/system':
-        optional: true
     dependencies:
       '@chakra-ui/system': 1.11.2_dc240608ee0d50d8faddd7dd724375c2
       '@chakra-ui/utils': 1.10.4
@@ -3156,6 +3159,10 @@ packages:
     resolution: {integrity: sha512-/ceqdqeRraGolFTcfoXNiqjyQhZzbINDngeoAq9GoHa8PPK1yNzTaxWjA6BFWp5Ua9JpXEMSS4s5i9tS0hOJtw==}
     dev: true
 
+  /@types/chance/1.1.3:
+    resolution: {integrity: sha512-X6c6ghhe4/sQh4XzcZWSFaTAUOda38GQHmq9BUanYkOE/EO7ZrkazwKmtsj3xzTjkLWmwULE++23g3d3CCWaWw==}
+    dev: true
+
   /@types/cookie/0.4.1:
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
 
@@ -3989,6 +3996,12 @@ packages:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
+  /builtins/4.0.0:
+    resolution: {integrity: sha512-qC0E2Dxgou1IHhvJSLwGDSTvokbRovU5zZFuDY6oY8Y2lF3nGt5Ad8YZK7GMtqzY84Wu7pXTPeHQeHcXSXsRhw==}
+    dependencies:
+      semver: 7.3.5
+    dev: true
+
   /bundle-require/3.0.4_esbuild@0.14.27:
     resolution: {integrity: sha512-VXG6epB1yrLAvWVQpl92qF347/UXmncQj7J3U8kZEbdVZ1ZkQyr4hYeL/9RvcE8vVVdp53dY78Fd/3pqfRqI1A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -4157,6 +4170,10 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+
+  /chance/1.1.8:
+    resolution: {integrity: sha512-v7fi5Hj2VbR6dJEGRWLmJBA83LJMS47pkAbmROFxHWd9qmE1esHRZW8Clf1Fhzr3rjxnNZVCjOEv/ivFxeIMtg==}
+    dev: true
 
   /char-regex/1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
@@ -5170,6 +5187,12 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-node-loader/0.6.5:
+    resolution: {integrity: sha512-uPP+dllWm38cFvDysdocutN3lfe5pTIbddAHp1ENyLzpHYqE2r+3Wo+pfg9X3p8DFWwzIisft5YkeBIthIcixw==}
+    dependencies:
+      esbuild: 0.14.27
+    dev: true
+
   /esbuild-openbsd-64/0.14.22:
     resolution: {integrity: sha512-vK912As725haT313ANZZZN+0EysEEQXWC/+YE4rQvOQzLuxAQc2tjbzlAFREx3C8+uMuZj/q7E5gyVB7TzpcTA==}
     engines: {node: '>=12'}
@@ -5187,6 +5210,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-register/3.3.2_esbuild@0.14.27:
+    resolution: {integrity: sha512-jceAtTO6zxPmCfSD5cBb3rgIK1vmuqCKYwgylHiS1BF4pq0jJiJb4K2QMuqF4BEw7XDBRatYzip0upyTzfkgsQ==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dependencies:
+      esbuild: 0.14.27
+    dev: true
 
   /esbuild-sunos-64/0.14.22:
     resolution: {integrity: sha512-/mbJdXTW7MTcsPhtfDsDyPEOju9EOABvCjeUU2OJ7fWpX/Em/H3WYDa86tzLUbcVg++BScQDzqV/7RYw5XNY0g==}
@@ -5591,6 +5622,17 @@ packages:
       v8-compile-cache: 2.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /esno/0.14.1:
+    resolution: {integrity: sha512-yDFYw6dGUjCT1qKsdG7WOc/RzIh/qwxUEVZ+ohCltaxBxEFMNqeqbQL9xjRl6Yvdwrfc5OCjUA9JbFmuu/8BKg==}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      esbuild: 0.14.27
+      esbuild-node-loader: 0.6.5
+      esbuild-register: 3.3.2_esbuild@0.14.27
+      import-meta-resolve: 1.1.1
     dev: true
 
   /espree/9.3.1:
@@ -6510,6 +6552,12 @@ packages:
     dependencies:
       pkg-dir: 4.2.0
       resolve-cwd: 3.0.0
+    dev: true
+
+  /import-meta-resolve/1.1.1:
+    resolution: {integrity: sha512-JiTuIvVyPaUg11eTrNDx5bgQ/yMKMZffc7YSjvQeSMXy58DO2SQ8BtAf3xteZvmzvjYh14wnqNjL8XVeDy2o9A==}
+    dependencies:
+      builtins: 4.0.0
     dev: true
 
   /imurmurhash/0.1.4:
