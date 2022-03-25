@@ -1,4 +1,5 @@
 import { PrismaClient } from 'prisma/client';
+import { getErrorMessage } from 'catch-safe';
 import { TeamFactory, TeamMemberFactory } from '../prisma/factories/team';
 
 async function main() {
@@ -24,7 +25,7 @@ async function main() {
 
 main()
   .catch((err) => {
-    console.error(err);
+    console.error(getErrorMessage(err));
     process.exit(1);
   })
   .finally(() => {

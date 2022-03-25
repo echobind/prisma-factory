@@ -40,6 +40,7 @@
     "@types/react-dom": "^17.0.14",
     "@vitejs/plugin-react": "^1.2.0",
     "@vitest/ui": "^0.6.3",
+    "catch-safe": "^0.1.1",
     "chance": "^1.1.8",
     "cuid": "^2.1.8",
     "esno": "^0.14.1",

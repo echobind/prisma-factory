@@ -1,6 +1,26 @@
 import { camelCase } from 'camel-case';
-import type { CreateFactoryReturn, CreateFactoryOptions, CreateFactoryHooks } from './lib/types';
+import type {
+  CreateFactoryReturn,
+  CreateFactoryOptions,
+  CreateFactoryHooks,
+  MaybeCallback,
+} from './lib/types';
 import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
+
+/**
+ * Map callaback attributes to prisma input attributes
+ */
+export function mapCallbackAttrs<T>(attrs: MaybeCallback<T>): T {
+  return Object.fromEntries(
+    Object.entries(attrs).map(([key, value]) => {
+      return typeof value === 'object'
+        ? mapCallbackAttrs(value)
+        : typeof value === 'function'
+        ? [key, value()]
+        : [key, value];
+    })
+  ) as T;
+}
 
 /**
  * Creates a new Prisma Factory based on a provided model name and set of default attributes.
@@ -10,13 +30,13 @@ import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
  */
 export function createFactory<CreateInputType, ReturnModelType>(
   modelName: string,
-  defaultAttrs = {},
+  defaultAttrs: () => Partial<CreateInputType>,
   options: CreateFactoryOptions = {},
   hooks: CreateFactoryHooks<CreateInputType, ReturnModelType> = {}
 ): CreateFactoryReturn<CreateInputType, ReturnModelType> {
   const build = (attrs: Partial<CreateInputType> = {}) => {
     const data = {
-      ...defaultAttrs,
+      ...(defaultAttrs && defaultAttrs()),
       ...attrs,
     } as CreateInputType;
 

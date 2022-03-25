@@ -44,7 +44,7 @@ export const TeamMemberFactory = createPersonFactory({
   linkedin: '#',
   expertise: {
     // TODO: Fix these typings
-    create: SkillFactory.build() as any,
+    create: () => SkillFactory.build(),
   },
 });
 

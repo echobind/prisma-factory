@@ -89,6 +89,7 @@ importers:
       '@types/react-dom': ^17.0.14
       '@vitejs/plugin-react': ^1.2.0
       '@vitest/ui': ^0.6.3
+      catch-safe: ^0.1.1
       chance: ^1.1.8
       cuid: ^2.1.8
       esno: ^0.14.1
@@ -128,6 +129,7 @@ importers:
       '@types/react-dom': 17.0.14
       '@vitejs/plugin-react': 1.2.0
       '@vitest/ui': 0.6.3
+      catch-safe: 0.1.1
       chance: 1.1.8
       cuid: 2.1.8
       esno: 0.14.1
@@ -836,7 +838,7 @@ packages:
       '@emotion/react': '>=10.0.35'
       react: '>=16.8.6'
     dependencies:
-      '@emotion/react': 11.8.2_@babel+core@7.17.8+react@17.0.2
+      '@emotion/react': 11.8.2_c1cf67fb40c16c390126f300fc197413
       react: 17.0.2
 
   /@chakra-ui/descendant/2.1.3_react@17.0.2:
@@ -1131,8 +1133,8 @@ packages:
       '@chakra-ui/react-env': 1.1.6_react@17.0.2
       '@chakra-ui/system': 1.11.2_dc240608ee0d50d8faddd7dd724375c2
       '@chakra-ui/utils': 1.10.4
-      '@emotion/react': 11.8.2_@babel+core@7.17.8+react@17.0.2
-      '@emotion/styled': 11.8.1_58c6d579b5d4620c3e3267b14eb7ebcf
+      '@emotion/react': 11.8.2_c1cf67fb40c16c390126f300fc197413
+      '@emotion/styled': 11.8.1_9e1aa84c2920c31b9f962a733ba5a2b4
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
 
@@ -1320,8 +1322,8 @@ packages:
       '@chakra-ui/system': 1.11.2_dc240608ee0d50d8faddd7dd724375c2
       '@chakra-ui/theme': 1.14.0_@chakra-ui+system@1.11.2
       '@chakra-ui/utils': 1.10.4
-      '@emotion/react': 11.8.2_@babel+core@7.17.8+react@17.0.2
-      '@emotion/styled': 11.8.1_58c6d579b5d4620c3e3267b14eb7ebcf
+      '@emotion/react': 11.8.2_c1cf67fb40c16c390126f300fc197413
+      '@emotion/styled': 11.8.1_9e1aa84c2920c31b9f962a733ba5a2b4
       react: 17.0.2
 
   /@chakra-ui/slider/1.5.9_cf1afb73b983ccab5207fbc7b13f7809:
@@ -1389,8 +1391,8 @@ packages:
       '@chakra-ui/react-utils': 1.2.3_react@17.0.2
       '@chakra-ui/styled-system': 1.18.1
       '@chakra-ui/utils': 1.10.4
-      '@emotion/react': 11.8.2_@babel+core@7.17.8+react@17.0.2
-      '@emotion/styled': 11.8.1_58c6d579b5d4620c3e3267b14eb7ebcf
+      '@emotion/react': 11.8.2_c1cf67fb40c16c390126f300fc197413
+      '@emotion/styled': 11.8.1_9e1aa84c2920c31b9f962a733ba5a2b4
       react: 17.0.2
       react-fast-compare: 3.2.0
 
@@ -4186,6 +4188,11 @@ packages:
 
   /caniuse-lite/1.0.30001320:
     resolution: {integrity: sha512-MWPzG54AGdo3nWx7zHZTefseM5Y1ccM7hlQKHRqJkPozUaw3hNbBTMmLn16GG2FUzjR13Cr3NPfhIieX5PzXDA==}
+
+  /catch-safe/0.1.1:
+    resolution: {integrity: sha512-mxiNjgFG4tgD/wiBnTmddQ4bulGIv00kY5Z39IF9OmuoPqBC234L8DdEwgO+dJ6BgRVXOpEdsqCQ4/JsZ+6Vnw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
 
   /chai/4.3.6:
     resolution: {integrity: sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==}
