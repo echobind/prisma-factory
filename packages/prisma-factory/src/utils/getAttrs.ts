@@ -1,6 +1,4 @@
-export type ObjectWithMaybeCallbacks<Type> = {
-  [Property in keyof Type]: Type[Property] extends keyof any ? (Type[Property] | (() => Type[Property])) : (ObjectWithMaybeCallbacks<Type[Property]> | (() => ObjectWithMaybeCallbacks<Type[Property]>));
-};
+import type { ObjectWithMaybeCallbacks } from '../lib/types';
 
 export const getAttrs = <T>(attrs: ObjectWithMaybeCallbacks<T>): T => {
   return Object.fromEntries(

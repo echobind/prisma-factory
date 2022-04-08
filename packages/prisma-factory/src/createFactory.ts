@@ -1,10 +1,10 @@
-import { getAttrs, ObjectWithMaybeCallbacks } from './utils/getAttrs';
+import { getAttrs } from './utils/getAttrs';
 import { camelCase } from 'camel-case';
 import type {
   CreateFactoryReturn,
   CreateFactoryOptions,
   CreateFactoryHooks,
-  MaybeCallback,
+  ObjectWithMaybeCallbacks,
 } from './lib/types';
 import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
 

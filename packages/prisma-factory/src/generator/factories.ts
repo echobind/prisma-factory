@@ -32,7 +32,7 @@ function addModelFactoryFunction(
   newFunction.insertParameters(0, [
     {
       name: 'requiredAttrs',
-      type: `Partial<Prisma.${model.name}CreateInput>`,
+      type: `ObjectWithMaybeCallbacks<Partial<Prisma.${model.name}CreateInput>>`,
       hasQuestionToken: true,
     },
   ]);
@@ -79,7 +79,11 @@ function addImports(
       namedImports: ['CreateFactoryOptions', 'CreateFactoryHooks', 'CreateFactoryReturn'],
       isTypeOnly: true,
     },
-
+    {
+      moduleSpecifier: 'prisma-factory',
+      namedImports: ['ObjectWithMaybeCallbacks'],
+      isTypeOnly: true,
+    },
     {
       moduleSpecifier: 'prisma-factory',
       namedImports: ['createFactory'],

@@ -1,3 +1,9 @@
+export type ObjectWithMaybeCallbacks<Type> = {
+  [Property in keyof Type]: Type[Property] extends keyof any
+    ? Type[Property] | (() => Type[Property])
+    : ObjectWithMaybeCallbacks<Type[Property]> | (() => ObjectWithMaybeCallbacks<Type[Property]>);
+};
+
 export interface CreateFactoryOptions {
   client?: string;
 }
@@ -11,7 +17,3 @@ export interface CreateFactoryReturn<CreateInputType, ReturnModelType> {
   build: (attrs?: Partial<CreateInputType>) => CreateInputType;
   create: (attrs?: Partial<CreateInputType>) => Promise<ReturnModelType>;
 }
-
-export type MaybeCallback<Type> = {
-  [Property in keyof Type]: Type[Property] | (() => Type[Property]);
-};
