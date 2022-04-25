@@ -1,5 +1,4 @@
 import { DMMF } from '@prisma/client/runtime';
-import { getSchemaDir } from '@prisma/sdk';
 import { SourceFile } from 'ts-morph';
 
 type GenerateFactoriesOptions = {
@@ -25,6 +24,8 @@ function addModelFactoryFunction(
   model: DMMF.Model,
   options: GenerateFactoriesOptions
 ) {
+  const createInputTypes = `Prisma.${model.name}CreateInput | Prisma.${model.name}UncheckedCreateInput`;
+
   const newFunction = sourceFile.addFunction({
     name: `create${model.name}Factory`,
   });
@@ -32,7 +33,7 @@ function addModelFactoryFunction(
   newFunction.insertParameters(0, [
     {
       name: 'requiredAttrs',
-      type: `ObjectWithMaybeCallbacks<Partial<Prisma.${model.name}CreateInput>>`,
+      type: `ObjectWithMaybeCallbacks<Partial<${createInputTypes}>>`,
       hasQuestionToken: true,
     },
   ]);
@@ -48,16 +49,16 @@ function addModelFactoryFunction(
   newFunction.insertParameters(2, [
     {
       name: 'hooks',
-      type: `CreateFactoryHooks<Prisma.${model.name}CreateInput, ${model.name}>`,
+      type: `CreateFactoryHooks<${createInputTypes}, ${model.name}>`,
       hasQuestionToken: true,
     },
   ]);
 
   newFunction.setBodyText(
-    `return createFactory<Prisma.${model.name}CreateInput, ${model.name}>('${model.name}', requiredAttrs, { ...options, client: '${options.client}' }, hooks); `
+    `return createFactory<${createInputTypes}, ${model.name}>('${model.name}', requiredAttrs, { ...options, client: '${options.client}' }, hooks); `
   );
 
-  newFunction.setReturnType(`CreateFactoryReturn<Prisma.${model.name}CreateInput, ${model.name}>`);
+  newFunction.setReturnType(`CreateFactoryReturn<${createInputTypes}, ${model.name}>`);
 
   newFunction.setIsExported(true);
 }
