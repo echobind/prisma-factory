@@ -32,7 +32,7 @@ function addModelFactoryFunction(
   newFunction.insertParameters(0, [
     {
       name: 'requiredAttrs',
-      type: `ObjectWithMaybeCallbacks<Partial<Prisma.${model.name}CreateInput>>`,
+      type: `ObjectWithMaybeCallbacks<Prisma.${model.name}CreateInput>`,
       hasQuestionToken: true,
     },
   ]);
