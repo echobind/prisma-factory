@@ -1,7 +1,7 @@
 import { GeneratorOptions } from '@prisma/generator-helper';
-import { Project } from 'ts-morph';
-import { parseEnvValue } from '@prisma/sdk';
+import { parseEnvValue } from '@prisma/internals';
 import { resolve } from 'path';
+import { Project } from 'ts-morph';
 
 import { generateFactories } from '../generator/factories';
 

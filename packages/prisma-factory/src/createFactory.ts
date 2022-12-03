@@ -1,12 +1,12 @@
-import { getAttrs } from './utils/getAttrs';
 import { camelCase } from 'camel-case';
+import { getAttrs } from './utils/getAttrs';
+import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
 import type {
   CreateFactoryReturn,
   CreateFactoryOptions,
   CreateFactoryHooks,
   ObjectWithMaybeCallbacks,
 } from './lib/types';
-import { getPrismaClient, buildPrismaIncludeFromAttrs } from './lib/prisma';
 
 /**
  * Creates a new Prisma Factory based on a provided model name and set of default attributes.

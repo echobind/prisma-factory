@@ -1,5 +1,6 @@
-import { getAttrs, ObjectWithMaybeCallbacks } from './../src/utils/getAttrs';
 import Chance from 'chance';
+import { getAttrs } from './../src/utils/getAttrs';
+import { ObjectWithMaybeCallbacks } from '../src/lib/types';
 
 const chance = new Chance();
 
