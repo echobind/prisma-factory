@@ -5,6 +5,7 @@ import {
   WrapperComponent,
 } from '@testing-library/react-hooks';
 import { ChakraProvider } from '@chakra-ui/react';
+import React from 'react';
 
 export * from '@testing-library/react';
 
@@ -21,7 +22,7 @@ export function render(
   return defaultRender(ui, { wrapper, ...options });
 }
 
-export function renderHook<TProps, TResult>(
+export function renderHook<TProps extends React.PropsWithChildren<{}>, TResult>(
   hook: RenderHook<TProps, TResult>,
   { wrapper, ...options }: RenderHookOptions<TProps> = {}
 ) {
