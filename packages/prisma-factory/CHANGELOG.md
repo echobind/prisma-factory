@@ -1,5 +1,13 @@
 # prisma-factory
 
+## 0.1.13
+
+### Patch Changes
+
+- [#21](https://github.com/echobind/prisma-factory/pull/21) [`4e780d2`](https://github.com/echobind/prisma-factory/commit/4e780d2d12ea2a5af7be40208da83fce9f5f0402) Thanks [@kgajera](https://github.com/kgajera)! - Upgrade to Prisma 4
+
+* [#20](https://github.com/echobind/prisma-factory/pull/20) [`bca92af`](https://github.com/echobind/prisma-factory/commit/bca92af7bf6ab1e01f8cf678447db41e9c610f9d) Thanks [@kgajera](https://github.com/kgajera)! - Updates prisma peer dependency to support version 3 or greater
+
 ## 0.1.11
 
 ### Patch Changes

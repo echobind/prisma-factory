@@ -1,6 +1,6 @@
 {
   "name": "prisma-factory",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "description": "Generates factories for your prisma models",
   "repository": {
     "type": "git",
