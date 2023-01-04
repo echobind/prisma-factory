@@ -14,7 +14,7 @@ yarn add prisma-factory --dev
 npm install prisma-factory --save-dev
 
 # Using pnpm
-pnpm add prisma-factory --dev
+pnpm add prisma-factory --save-dev
 ```
 
 Once installed, open your Prisma schema file to add the generator block for `prisma-factory`:
