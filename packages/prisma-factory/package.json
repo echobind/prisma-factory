@@ -28,6 +28,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
+    "./generated": {
+      "types": "./generated/index.d.ts",
+      "import": "./generated/index.js",
+      "require": "./generated/index.js"
+    },
     "./*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.mjs",
